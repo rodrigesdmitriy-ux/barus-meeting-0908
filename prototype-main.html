@@ -1,230 +1,272 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8">
-<title>Прототип главной barus.tools · шаблон INTEC.Prom</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Схема главной barus.tools · 12 блоков</title>
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--t:#42c1c7;--td:#0e6d73;--k:#232323;--bt:#ae2573;--g:#009681;--bg:#f4f6f8;--line:#e3e7ec}
+:root{--bg:#141719;--td:#232323;--bt:#009681;--line:#e3e6e8;--y:#fff3b0;--yb:#e0b400;--muted:#6b7378}
 *{box-sizing:border-box}
-body{margin:0;font:15px/1.5 Montserrat,Tahoma,sans-serif;color:var(--k);background:#fff}
-h1,h2,h3{font-family:'Russo One',Montserrat,sans-serif;font-weight:400;margin:0}
-a{color:inherit;text-decoration:none}
-.w{max-width:1280px;margin:0 auto;padding:0 32px}
-section{position:relative;padding:56px 0}
-.tag{position:absolute;left:0;top:0;background:var(--bt);color:#fff;font:600 11px/1 Montserrat;padding:6px 10px;border-radius:0 0 8px 0;z-index:3;letter-spacing:.3px}
-body.clean .tag{display:none}
-.tag i{font-style:normal;opacity:.75;margin-left:6px}
-h2{font-size:28px;margin-bottom:26px}
-h2 small{display:block;font:500 12px Montserrat;color:var(--td);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
-.btn{display:inline-block;padding:14px 26px;border-radius:4px;font:600 14px Montserrat;background:var(--t);color:var(--k);border:2px solid var(--t);cursor:pointer}
-.btn:hover{background:var(--td);border-color:var(--td);color:#fff}
-.btn.o{background:transparent;color:var(--k);border-color:var(--k)}
-.btn.o.w{color:#fff;border-color:#fff}
-.ph{background:repeating-linear-gradient(135deg,#dfe4ea 0 10px,#e9edf1 10px 20px);color:#6b7480;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;padding:10px}
-/* 1 header */
-.top{background:var(--k);color:#fff}
-.top .bar{display:flex;align-items:center;gap:28px;padding:10px 0;font-size:13px;border-bottom:1px solid #ffffff22}
-.top .bar .m{opacity:.6}.top .bar b{font-size:16px}
-.top .bar .r{margin-left:auto;display:flex;gap:16px;align-items:center}
-.top .nav{display:flex;align-items:center;gap:26px;padding:16px 0}
-.top .nav img{height:46px}
-.top .nav .menu{display:flex;gap:18px;font:600 12px Montserrat;text-transform:uppercase;white-space:nowrap}
-.top .nav .menu a.act{color:var(--t);border-bottom:2px solid var(--t);padding-bottom:3px}
-.top .search{margin-left:auto;background:#fff1;border:1px solid #fff3;border-radius:4px;padding:9px 14px;width:200px;font-size:13px;color:#fff9}
-.icons{display:flex;gap:16px;font-size:13px}
-/* 2 hero */
-.hero{background:#1a1f24 url() ;color:#fff;padding:0}
-.hero .in{display:grid;grid-template-columns:1.1fr .9fr;min-height:520px}
-.hero .txt{padding:80px 0 70px}
-.hero h1{font-size:44px;line-height:1.15;margin-bottom:18px}
-.hero h1 span{color:var(--t)}
-.hero p{font-size:17px;max-width:560px;opacity:.85;margin:0 0 30px}
-.hero .cta{display:flex;gap:14px;margin-bottom:34px}
-.hero .brands{font-size:12px;opacity:.6;letter-spacing:1px;text-transform:uppercase}
-.hero .pic{background:linear-gradient(160deg,#2b3239,#141719);position:relative}
-.hero .pic .ph{position:absolute;inset:0;background:none;color:#fff6;font-size:13px}
-/* 3 tiles */
-.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.tile{background:var(--bg);border-radius:8px;padding:22px 20px 20px;min-height:230px;display:flex;flex-direction:column;border-top:4px solid var(--t)}
-.tile .ic{width:44px;height:44px;border-radius:8px;background:var(--k);margin-bottom:14px;color:var(--t);display:flex;align-items:center;justify-content:center;font:800 18px Montserrat}
-.tile h3{font-size:15px;margin-bottom:8px;line-height:1.3}
-.tile ul{margin:0;padding:0;list-style:none;font-size:12.5px;color:#555;flex:1}
-.tile li{margin:2px 0}
-.tile .n{font-size:12px;color:var(--td);font-weight:600;margin-top:12px}
-/* 4 logos */
-.logos{background:var(--bg);padding:34px 0}
-.logos .row{display:flex;gap:10px}
-.logo{flex:1;min-width:0;height:56px;background:#fff;border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;font:800 11px Montserrat;color:#4a5560;letter-spacing:.3px;text-align:center;padding:4px}
-.logos .note{font-size:12px;color:#7a8490;margin-top:12px}
-/* 5 adv */
-.adv{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.adv div{padding:22px 18px;border:1px solid var(--line);border-radius:8px}
-.adv b{display:block;font-size:14px;margin-bottom:6px}
-.adv b::before{content:"✔";color:var(--g);margin-right:8px}
-.adv span{font-size:12.5px;color:#5a6470}
-/* 6 top cats */
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.cat{border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.cat .ph{height:150px}
-.cat .b{padding:14px 16px}
-.cat .b h3{font-size:14px;line-height:1.3;margin-bottom:6px}
-.cat .b span{font-size:12px;color:#6b7480}
-.cat .b em{font-style:normal;color:var(--td);font-weight:600}
-/* 7 tech */
-.tech{background:var(--k);color:#fff}
-.tech .in{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.tech .c{background:#2c2c2c;border-radius:8px;padding:28px;border-left:4px solid var(--t)}
-.tech h3{font-size:18px;margin-bottom:10px}
-.tech p{font-size:13.5px;opacity:.8;margin:0 0 18px}
-.tech .btn{padding:11px 20px}
-/* 8 service */
-.svc .in{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.svc .ph{height:320px;border-radius:8px}
-.svc p{color:#4a5560}
-.svc ul{color:#4a5560;padding-left:18px;font-size:14px}
-/* 9 projects */
-.prj{background:var(--bg)}
-.pr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.pr>div{background:#fff;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
-.pr .ph{height:160px}
-.pr .b{padding:16px}
-.pr .b b{display:block;font-size:14px;margin-bottom:8px}
-.pr .b p{font-size:12.5px;color:#5a6470;margin:0 0 4px}
-.pr .b p strong{color:var(--k);font-weight:600}
-/* 10 news */
-.nw{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.nw>div{border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.nw .ph{height:130px}
-.nw .b{padding:14px}
-.nw .b time{font-size:11.5px;color:#8a94a0}
-.nw .b b{display:block;font-size:13.5px;margin-top:4px;line-height:1.35}
-.nw .b i{display:inline-block;font:600 10px Montserrat;font-style:normal;text-transform:uppercase;color:var(--td);margin-bottom:6px}
-/* 11 form */
-.frm{background:var(--k);color:#fff}
-.frm .in{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}
-.frm h2{color:#fff}.frm p{opacity:.8;font-size:14px}
-.frm form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.frm input,.frm textarea{width:100%;padding:13px 14px;border:1px solid #ffffff33;background:#ffffff0f;color:#fff;border-radius:4px;font:14px Montserrat}
-.frm textarea{grid-column:1/3;height:90px}
-.frm label{grid-column:1/3;font-size:11.5px;opacity:.65}
-.frm .btn{grid-column:1/3;justify-self:start}
-/* 12 footer */
-footer{background:#161616;color:#cfd4d9;padding:50px 0 24px;font-size:13px}
-footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:28px}
-footer b{display:block;color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
-footer li{list-style:none;margin:5px 0}footer ul{padding:0;margin:0}
-footer img{height:40px;margin-bottom:14px}
-footer .legal{border-top:1px solid #ffffff1a;margin-top:36px;padding-top:18px;display:flex;gap:24px;flex-wrap:wrap;font-size:12px;color:#8a94a0}
-/* panel */
-.panel{position:fixed;right:16px;bottom:16px;z-index:9;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;box-shadow:0 6px 24px #0002;font-size:12px}
-.panel button{font:600 12px Montserrat;border:1px solid var(--k);background:#fff;border-radius:4px;padding:6px 10px;cursor:pointer;margin-left:8px}
-</style></head><body>
-<div style="background:#232323;color:#fff;font:13px/1.5 Montserrat,Tahoma,sans-serif;text-align:center;padding:8px 16px">Черновой макет главной для обсуждения структуры. Тексты, цифры, сроки и фото заменяются данными заказчика.</div>
+body{margin:0;background:#eef0f2;font-family:Montserrat,Arial,sans-serif;color:var(--td);font-size:14px;line-height:1.45}
+h1,h2,h3,.ru{font-family:'Russo One',Montserrat,sans-serif;font-weight:400;letter-spacing:.2px}
+.page{max-width:1240px;margin:24px auto 60px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.08)}
+.note{max-width:1240px;margin:20px auto 0;font-size:13px;color:var(--muted)}
+.note b{color:var(--td)}
+.y{background:var(--y);border-bottom:2px solid var(--yb)}
+.blk{position:relative;padding:36px 48px;border-top:1px solid var(--line)}
+.blk .tag{position:absolute;left:0;top:0;background:var(--td);color:#fff;font-size:11px;padding:4px 10px;font-family:Montserrat;letter-spacing:.5px}
+.blk .tpl{position:absolute;right:0;top:0;font-size:11px;padding:4px 10px;color:var(--muted);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.blk h2{margin:0 0 6px;font-size:24px}
+.blk h2 small{display:block;font-family:Montserrat;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--bt);margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 20px;max-width:720px}
+.dark{background:var(--bg);color:#fff}
+.dark .sub{color:#b8bec2}
+.dark h2 small{color:#4fd1b8}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.card{border:1px solid var(--line);padding:18px;background:#fff;min-height:96px}
+.card h3{margin:0 0 6px;font-size:15px}
+.card p{margin:0;color:var(--muted);font-size:13px}
+.card .cnt{font-family:'Russo One';font-size:28px;color:var(--bt);display:block;margin-bottom:6px}
+.btn{display:inline-block;padding:12px 22px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.6px;background:var(--bt);color:#fff;text-decoration:none}
+.btn.o{background:transparent;border:2px solid #fff;color:#fff}
+.btn.d{background:var(--td)}
+.ph{background:repeating-linear-gradient(45deg,#f2f4f5,#f2f4f5 8px,#e8ebed 8px,#e8ebed 16px);border:1px dashed #c9ced2;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;text-align:center;padding:10px}
+.ico{width:44px;height:44px;border:2px solid var(--bt);border-radius:6px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--bt);font-weight:600}
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 48px;font-size:12px;border-bottom:1px solid var(--line);color:var(--muted)}
+.top span+span{margin-left:22px}
+.hdr{display:flex;align-items:center;gap:28px;padding:16px 48px}
+.logo{font-family:'Russo One';font-size:28px;color:var(--td)}
+.logo i{color:var(--bt);font-style:normal}
+.search{flex:1;border:1px solid var(--line);padding:10px 14px;color:var(--muted);font-size:13px}
+.cart{border:1px solid var(--line);padding:10px 14px;font-size:12px}
+.menu{display:flex;background:var(--td);color:#fff;padding:0 48px}
+.menu div{padding:14px 20px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+.menu div:first-child{background:var(--bt)}
+.menu .r{margin-left:auto;font-weight:500;text-transform:none;color:#c9ced2}
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:56px 48px}
+.hero h1{font-size:40px;line-height:1.15;margin:0 0 16px}
+.hero h1 span{color:#4fd1b8}
+.hero p{color:#c9ced2;font-size:15px;max-width:560px;margin:0 0 26px}
+.hero .btn+.btn{margin-left:12px}
+.hero .ph{height:300px;background:repeating-linear-gradient(45deg,#1c2023,#1c2023 8px,#22272a 8px,#22272a 16px);border-color:#3a4145;color:#8a9297}
+/* logos */
+.logos{display:flex;flex-wrap:wrap;gap:10px}
+.logos span{border:1px solid var(--line);padding:12px 18px;font-family:'Russo One';font-size:14px;color:#555;background:#fff;min-width:120px;text-align:center}
+.logos span.y{color:#7a5d00}
+.logos .lbl{border:0;min-width:0;padding:12px 6px 12px 0;font-family:Montserrat;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);text-align:left;flex-basis:100%}
+/* form */
+.form{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.form input,.form textarea{width:100%;border:1px solid var(--line);padding:12px;font-family:inherit;font-size:13px;background:#fff}
+.form textarea{grid-column:1/-1;height:70px}
+.form label{grid-column:1/-1;font-size:12px;color:var(--muted)}
+/* footer */
+.foot{background:var(--bg);color:#c9ced2;padding:40px 48px 24px;font-size:13px}
+.foot h4{color:#fff;margin:0 0 12px;font-family:'Russo One';font-weight:400;font-size:14px}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin:0 0 7px}
+.foot .low{border-top:1px solid #2c3236;margin-top:30px;padding-top:16px;font-size:12px;color:#8a9297;display:flex;justify-content:space-between}
+.legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:6px;border:1px solid #ccc}
+.q{font-size:12px;color:#7a5d00;padding:8px 12px;margin-top:14px;display:inline-block}
+</style>
+</head>
+<body>
 
-<!-- 1 -->
-<header class="top" style="position:relative"><span class="tag">1 · Хедер</span>
-<div class="w bar"><span><span class="m">СПб · Москва · Ставрополь</span></span><b>+7 (800) 505-12-36</b><span class="m">info@barus.tools · пн–пт 9:00–18:00</span>
-<div class="r"><a class="btn" style="padding:8px 16px;font-size:12px">Заказать звонок</a></div></div>
-<div class="w nav"><img src="logobarus.png" alt="Барус Инструмент">
-<nav class="menu"><a class="act">Каталог</a><a>Сервис</a><a>Производители</a><a>Помощь</a><a>Техинформация</a><a>О компании</a><a>Контакты</a></nav>
-<div class="search">Поиск по артикулу или названию…</div>
-<div class="icons"><span>⇄ 0</span><span>♡ 0</span><span>🛒 0</span></div></div>
-</header>
-
-<!-- 2 -->
-<section class="hero"><span class="tag">2 · Первый экран <i>УТП вместо слайдера</i></span>
-<div class="w in"><div class="txt">
-<h1>Инструмент для станков листообработки · <span>оригинал и совместимый</span></h1>
-<p>Пробивной инструмент KETEC, гибочный Amada Promecam / Trumpf / Wila, расходники для лазера · со склада в Санкт‑Петербурге, доставка по всей России. Заточка и восстановление в собственном сервисном центре.</p>
-<div class="cta"><a class="btn">Перейти в каталог</a><a class="btn o w">Оставить заявку менеджеру</a></div>
-<div class="brands">KETEC · Amada Promecam · Trumpf · Wila · Bystronic · Precitec · Raytools</div>
-</div><div class="pic"><div class="ph">Фото: склад / инструмент крупным планом<br>(фото со старого сайта или новая съёмка)</div></div></div>
-</section>
-
-<!-- 3 -->
-<section><span class="tag">3 · Плитки 5 направлений <i>иконки из брендбука</i></span><div class="w">
-<div class="tiles">
-<a class="tile"><div class="ic">01</div><h3>Пробивной инструмент KETEC</h3><ul><li>Thick Turret</li><li>Murata / Salvagnini / Thin Turret</li><li>Trumpf</li><li>Формовочный</li><li>Роликовый</li></ul><div class="n">→ /catalog/punchtools/</div></a>
-<a class="tile"><div class="ic">02</div><h3>Гибочный инструмент</h3><ul><li>Amada Promecam</li><li>Wila · Bystronic</li><li>Trumpf · LVD</li><li>Ножи для гильотин</li><li>Адаптеры, стойки</li></ul><div class="n">→ /catalog/bendingtools/</div></a>
-<a class="tile"><div class="ic">03</div><h3>Расходники для лазерной резки</h3><ul><li>Precitec · Raytools/Bodor</li><li>WSX · Bystronic</li><li>Trumpf · Raycus</li><li>Прочие расходники</li></ul><div class="n">→ /catalog/laser_comsumables/</div></a>
-<a class="tile"><div class="ic">04</div><h3>Станки и оборудование</h3><ul><li>Листогибочные прессы EKO</li><li>Лазерная резка металла / труб</li><li>Комбинированные, КПП</li><li>Лазерная сварка</li></ul><div class="n">→ /catalog/machines/</div></a>
-<a class="tile"><div class="ic">05</div><h3>Сервис и заточка</h3><ul><li>Заточка пробивного инструмента</li><li>Восстановление</li><li>BARUS GRINDER PRO</li></ul><div class="n">→ /service/</div></a>
-</div></div></section>
-
-<!-- 4 -->
-<section class="logos"><span class="tag">4 · Лого-лента производителей <i>состав подтвердить у заказчика</i></span><div class="w">
-<div class="row"><div class="logo">KETEC</div><div class="logo">AMADA PROMECAM</div><div class="logo">TRUMPF</div><div class="logo">WILA</div><div class="logo">BYSTRONIC</div><div class="logo">LVD</div><div class="logo">PRECITEC</div><div class="logo">RAYTOOLS</div><div class="logo">WSX</div><div class="logo">RAYCUS</div></div>
-<div class="note">HSG, Abamet, HighPower · не ставим до подтверждения (в брифе только как референсы/дилерство).</div>
-</div></section>
-
-<!-- 5 -->
-<section><span class="tag">5 · Преимущества</span><div class="w"><h2><small>почему мы</small>Работаем с производствами по всей России</h2>
-<div class="adv">
-<div><b>Оригинал и совместимый</b><span>Подбираем под ваш станок: оригинальный инструмент или совместимый аналог дешевле.</span></div>
-<div><b>Склад в СПб</b><span>Ходовые позиции в наличии, срок отгрузки уточняем у заказчика.</span></div>
-<div><b>Свой сервис</b><span>Заточка и восстановление пробивного инструмента на BARUS GRINDER PRO.</span></div>
-<div><b>Доставка по РФ</b><span>Транспортными компаниями, расчёт сроков и стоимости при заказе.</span></div>
-<div><b>Юрлицам</b><span>Счёт, договор. Заявка с сайта · менеджер перезвонит.</span></div>
-</div></div></section>
-
-<!-- 6 -->
-<section><span class="tag">6 · Топ-категории по объёму номенклатуры <i>цифры из старого sitemap</i></span><div class="w"><h2><small>популярное</small>Самые востребованные разделы</h2>
-<div class="cats">
-<div class="cat"><div class="ph">фото пуансон/матрица Promecam</div><div class="b"><h3>Гибочный инструмент Amada Promecam</h3><span><em>519 позиций</em> · пуансоны, матрицы, адаптеры</span></div></div>
-<div class="cat"><div class="ph">фото KETEC Thick Turret</div><div class="b"><h3>Пробивной инструмент Thick Turret</h3><span><em>142 позиции</em> · станции A–E</span></div></div>
-<div class="cat"><div class="ph">фото Thin Turret</div><div class="b"><h3>Murata / Salvagnini / Thin Turret</h3><span><em>93 позиции</em></span></div></div>
-<div class="cat"><div class="ph">фото сопла / линзы</div><div class="b"><h3>Расходники Precitec, Raytools, WSX</h3><span>сопла, защитные стёкла, линзы, керамика</span></div></div>
-</div></div></section>
-
-<!-- 7 -->
-<section class="tech"><span class="tag">7 · Калькуляторы и техинформация <i>калькулятор · отдельный этап</i></span><div class="w"><h2 style="color:#fff"><small style="color:var(--t)">инженерам</small>Техническая информация</h2>
-<div class="in">
-<div class="c"><h3>Калькулятор усилия гибки</h3><p>Тоннаж по материалу, толщине, раскрытию матрицы и длине гиба. Подбор инструмента под ваш пресс.</p><a class="btn">Рассчитать</a></div>
-<div class="c"><h3>Инструкции и PDF-документация</h3><p>Правила эксплуатации и заточки пробивного инструмента, таблицы допусков, каталоги производителей.</p><a class="btn o w">Открыть раздел</a></div>
-</div></div></section>
-
-<!-- 8 -->
-<section class="svc"><span class="tag">8 · Сервис</span><div class="w in">
-<div class="ph">фото BARUS GRINDER PRO / цех</div>
-<div><h2><small>сервисный центр</small>Заточка и обслуживание пробивного инструмента</h2>
-<p>Восстанавливаем геометрию пуансонов и матриц Thick Turret, Thin Turret, Trumpf. Собственный заточной станок BARUS GRINDER PRO.</p>
-<ul><li>заточка и полировка рабочей части</li><li>восстановление пружинных узлов и направляющих</li><li>оценка состояния и рекомендации по замене</li></ul>
-<a class="btn">Отправить инструмент на заточку</a></div>
-</div></section>
-
-<!-- 9 -->
-<section class="prj"><span class="tag">9 · Проекты / кейсы <i>из старого /projects/</i></span><div class="w"><h2><small>кейсы</small>Реализованные проекты</h2>
-<div class="pr">
-<div><div class="ph">фото объекта</div><div class="b"><b>Комплектация участка гибки инструментом Promecam</b><p><strong>Задача:</strong> заменить изношенный оригинал без простоя</p><p><strong>Решение:</strong> совместимый инструмент со склада</p><p><strong>Результат:</strong> цифры и сроки заполним по данным заказчика</p></div></div>
-<div><div class="ph">фото объекта</div><div class="b"><b>Поставка листогибочного пресса EKO</b><p><strong>Задача:</strong> …</p><p><strong>Решение:</strong> …</p><p><strong>Результат:</strong> …</p></div></div>
-<div><div class="ph">фото объекта</div><div class="b"><b>Восстановление парка пробивного инструмента</b><p><strong>Задача:</strong> …</p><p><strong>Решение:</strong> …</p><p><strong>Результат:</strong> …</p></div></div>
-</div></div></section>
-
-<!-- 10 -->
-<section><span class="tag">10 · Новости и статьи <i>штатный виджет</i></span><div class="w"><h2><small>блог</small>Новости и статьи</h2>
-<div class="nw">
-<div><div class="ph">фото</div><div class="b"><i>Статья</i><br><time>24.08.2026</time><b>Профессиональная лазерная сварка: купить или начать с аренды</b></div></div>
-<div><div class="ph">фото</div><div class="b"><i>Статья</i><br><time>дата</time><b>Рекомендации по выбору листогибочного инструмента. Часть I</b></div></div>
-<div><div class="ph">фото</div><div class="b"><i>Статья</i><br><time>дата</time><b>Основные правила заточки пробивного инструмента</b></div></div>
-</div></div></section>
-
-<!-- 11 -->
-<section class="frm"><span class="tag">11 · Форма обратной связи <i>текст согласия · юрист</i></span><div class="w in">
-<div><h2><small style="color:var(--t)">заявка</small>Не нашли нужную позицию?</h2><p>Пришлите артикул, модель станка или фото · подберём оригинал или совместимый аналог и выставим счёт.</p></div>
-<form><input placeholder="Имя"><input placeholder="Компания"><input placeholder="Телефон"><input placeholder="E-mail"><textarea placeholder="Артикул, станок, задача…"></textarea>
-<label>☐ Соглашаюсь с политикой обработки персональных данных</label><a class="btn">Отправить заявку</a></form>
-</div></section>
-
-<!-- 12 -->
-<footer style="position:relative"><span class="tag">12 · Футер</span><div class="w">
-<div class="cols">
-<div><img src="logobarus.png" alt=""><div>ООО «Барус Инструмент»<br>Санкт‑Петербург · Москва · Ставрополь<br><b style="display:inline;text-transform:none;margin:0">+7 (800) 505-12-36</b></div></div>
-<div><b>Каталог</b><ul><li>Пробивной инструмент</li><li>Гибочный инструмент</li><li>Расходники для лазера</li><li>Станки</li><li>Сервис</li></ul></div>
-<div><b>Компания</b><ul><li>О компании</li><li>Производители</li><li>Партнёры</li><li>Проекты</li><li>Производство</li><li>Сертификаты</li><li>Отзывы</li></ul></div>
-<div><b>Помощь</b><ul><li>Как купить</li><li>Оплата</li><li>Доставка</li><li>Гарантия и возврат</li><li>Рассрочка / лизинг</li><li>Субсидии</li></ul></div>
-<div><b>Информация</b><ul><li>Техническая информация</li><li>Калькулятор гибки</li><li>Новости</li><li>Статьи</li><li>Акции</li><li>Контакты</li></ul></div>
+<div class="note">
+  <div class="legend">
+    <b>Схема главной barus.tools, шаблон INTEC.Prom</b>
+    <span><i style="background:var(--y);border-color:var(--yb)"></i>жёлтое: решает заказчик</span>
+    <span><i style="background:#f2f4f5;border-style:dashed"></i>штриховка: место под фото или картинку</span>
+    <span>подпись справа вверху каждого блока: чем закрывается в шаблоне</span>
+  </div>
 </div>
-<div class="legal"><span>© 2026 Барус Инструмент</span><span>Политика обработки ПДн</span><span>Согласие на обработку</span><span>Cookies</span><span>Карта сайта</span></div>
-</div></footer>
 
-<div class="panel">Прототип главной · INTEC.Prom <button onclick="document.body.classList.toggle('clean')">скрыть/показать номера блоков</button></div>
-</body></html>
+<div class="page">
+
+<!-- 1. Хедер -->
+<div class="blk" style="padding:0;border-top:0">
+  <span class="tag">1 · Хедер</span>
+  <span class="tpl">шаблон: штатная шапка, настройки без правок кода</span>
+  <div class="top" style="padding-top:30px">
+    <div><span>Санкт-Петербург ▾</span><span>пн-пт 9:00-18:00</span></div>
+    <div><span>+7 (___) ___-__-__</span><span>eav@barus.tools</span><span style="color:var(--bt);font-weight:600">Заказать звонок</span></div>
+  </div>
+  <div class="hdr">
+    <div class="logo">BARUS<i>.</i></div>
+    <div class="search">Поиск по артикулу или названию</div>
+    <div class="cart">Сравнение</div>
+    <div class="cart">Корзина</div>
+    <div class="cart">Войти</div>
+  </div>
+  <div class="menu">
+    <div>Каталог ▾</div><div>Пробивной инструмент</div><div>Гибочный инструмент</div><div>Расходники для лазера</div><div>Станки</div><div>Сервис</div>
+    <div class="r">Производители · Проекты · Техинформация · О компании · Контакты</div>
+  </div>
+</div>
+
+<!-- 2. Первый экран -->
+<div class="blk dark hero">
+  <span class="tag">2 · Первый экран</span>
+  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: слайдер отключаем, ставим один статичный баннер</span>
+  <div>
+    <h1>Инструмент для станков листообработки. <span>Оригинал и совместимый.</span></h1>
+    <p>Пробивной KETEC, гибочный под Amada Promecam, Trumpf, Wila, Bystronic, LVD, расходники для лазерной резки. Офисы в Петербурге, Москве и Ставрополе, у каждого свой менеджер.</p>
+    <a class="btn" href="#">В каталог</a><a class="btn o" href="#">Оставить заявку</a>
+  </div>
+  <div class="ph">фото инструмента или станка<br>из фотобанка заказчика</div>
+</div>
+
+<!-- 3. Плитки -->
+<div class="blk">
+  <span class="tag">3 · Направления каталога</span>
+  <span class="tpl">шаблон: блок «Категории каталога», иконки из брендбука</span>
+  <div class="grid g5">
+    <div class="card"><div class="ico">ico</div><h3>Пробивной инструмент</h3><p>KETEC. Thick Turret, Thin Turret, Trumpf, формовочный, роликовый</p></div>
+    <div class="card"><div class="ico">ico</div><h3>Гибочный инструмент</h3><p>Amada Promecam, Wila, Bystronic, Trumpf, LVD</p></div>
+    <div class="card"><div class="ico">ico</div><h3>Расходники для лазера</h3><p>Precitec, Raytools, WSX, Raycus, Bystronic, Trumpf</p></div>
+    <div class="card"><div class="ico">ico</div><h3>Станки</h3><p>Листогибы, лазерная резка, КПП, сварка</p></div>
+    <div class="card"><div class="ico">ico</div><h3>Сервис</h3><p>Заточка и восстановление пробивного инструмента</p></div>
+  </div>
+</div>
+
+<!-- 4. Лого-лента -->
+<div class="blk">
+  <span class="tag">4 · Производители</span>
+  <span class="tpl">шаблон: блок «Бренды», подтягивается из раздела /brands/</span>
+  <div class="logos">
+    <span>KETEC</span><span>Amada Promecam</span><span>Trumpf</span><span>Wila</span><span>Bystronic</span><span>LVD</span><span>Raycus</span><span>Raytools / Bodor</span><span>Precitec</span><span>WSX</span>
+    <span class="y">Abamet</span><span class="y">HighPower</span><span class="y">HSG</span>
+  </div>
+  <div class="q y">Abamet и HighPower на старом сайте стоят как референсы, а не как бренды каталога. HSG есть и как страница дилерства, и как разделы станков. Показывать ли эти три в ленте?</div>
+</div>
+
+<!-- 5. Преимущества -->
+<div class="blk dark">
+  <span class="tag">5 · Почему у нас</span>
+  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: блок «Преимущества», 5 карточек</span>
+  <h2><small>почему мы</small>Работаем с производствами по всей России</h2>
+  <div class="grid g5">
+    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Оригинал и совместимый</h3><p>Под один и тот же станок даём оба варианта, разница в цене видна сразу</p></div>
+    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Склад</h3><p>Ходовые позиции лежат, отгрузка без ожидания производства</p></div>
+    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Заточка и сервис</h3><p>Свой центр обслуживания пробивного инструмента</p></div>
+    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Доставка по РФ</h3><p>Отгружаем в любой регион, офисы в Петербурге, Москве и Ставрополе</p></div>
+    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Для юрлиц</h3><p>Заявка, счёт, закрывающие документы. Мелочь можно оплатить картой в корзине</p></div>
+  </div>
+</div>
+
+<!-- 6. Топ-категории -->
+<div class="blk">
+  <span class="tag">6 · Самые большие разделы</span>
+  <span class="tpl">шаблон: блок «Популярные категории», выбор разделов вручную</span>
+  <h2><small>популярное</small>Куда заходят чаще всего</h2>
+  <p class="sub">Порядок по объёму номенклатуры на старом сайте, а не по догадке.</p>
+  <div class="grid g3">
+    <div class="card"><span class="cnt">519</span><h3>Amada Promecam</h3><p>Гибочный инструмент: пуансоны, матрицы, держатели</p></div>
+    <div class="card"><span class="cnt">142</span><h3>Thick Turret</h3><p>Пробивной инструмент для револьверных прессов</p></div>
+    <div class="card"><span class="cnt">93</span><h3>Murata / Salvagnini / Thin Turret</h3><p>Пробивной инструмент</p></div>
+  </div>
+</div>
+
+<!-- Акции: место -->
+<div class="blk y" style="padding:22px 48px">
+  <span class="tag">Акции</span>
+  <span class="tpl" style="border-color:var(--yb)">шаблон: блок «Акции», включается в настройках</span>
+  <div style="color:#7a5d00;font-size:13px">Место под блок оставляем. На старом сайте все 8 акций в архиве. Будут ли регулярные акции и кто их ведёт, отвечает маркетинг заказчика. До ответа блок выключен.</div>
+</div>
+
+<!-- 7. Техинформация -->
+<div class="blk">
+  <span class="tag">7 · Техинформация и калькуляторы</span>
+  <span class="tpl">шаблон: блок «Услуги» или инфоблок с иконками; сами калькуляторы переезжают со старого сайта</span>
+  <h2><small>инженерам</small>Посчитать и проверить перед заказом</h2>
+  <div class="grid g4">
+    <div class="card"><h3>Калькулятор тоннажа</h3><p>Для пробивного инструмента. Сейчас живёт на /tech-info/</p></div>
+    <div class="card"><h3>Калькулятор гибки</h3><p>Усилие гибки по толщине и раскрытию матрицы</p></div>
+    <div class="card"><h3>Таблицы</h3><p>Скорости лазерной резки листа и трубы, усилия гибки, зазоры пробивного инструмента</p></div>
+    <div class="card"><h3>Статьи</h3><p>Как выбрать станок лазерной резки, управляемые оси ЧПУ, гибочный и пробивной инструмент</p></div>
+  </div>
+</div>
+
+<!-- 8. Сервис -->
+<div class="blk dark" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+  <span class="tag">8 · Сервис</span>
+  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: блок «Текст + картинка», раздел /service/</span>
+  <div>
+    <h2><small>сервисный центр</small>Заточка и обслуживание пробивного инструмента</h2>
+    <p class="sub">Затачиваем на станке BARUS GRINDER PRO. Восстанавливаем геометрию, меняем расходники, возвращаем инструмент в работу вместо покупки нового.</p>
+    <a class="btn" href="#">Подробнее о сервисе</a>
+  </div>
+  <div class="ph" style="height:220px;background:repeating-linear-gradient(45deg,#1c2023,#1c2023 8px,#22272a 8px,#22272a 16px);border-color:#3a4145;color:#8a9297">фото сервисного центра</div>
+</div>
+
+<!-- 9. Проекты -->
+<div class="blk">
+  <span class="tag">9 · Проекты</span>
+  <span class="tpl">шаблон: инфоблок «Проекты» с карточками, раздел /projects/</span>
+  <h2><small>кейсы</small>Реализованные проекты</h2>
+  <p class="sub">Берём из старого раздела. Каждый проект по одной схеме: что стояло, что поставили, что получилось. С фото.</p>
+  <div class="grid g3">
+    <div class="card"><div class="ph" style="height:120px;margin-bottom:12px">фото</div><h3>Проект 1</h3><p>Задача · решение · результат</p></div>
+    <div class="card"><div class="ph" style="height:120px;margin-bottom:12px">фото</div><h3>Проект 2</h3><p>Задача · решение · результат</p></div>
+    <div class="card"><div class="ph" style="height:120px;margin-bottom:12px">фото</div><h3>Проект 3</h3><p>Задача · решение · результат</p></div>
+  </div>
+</div>
+
+<!-- 10. Новости и статьи -->
+<div class="blk">
+  <span class="tag">10 · Новости и статьи</span>
+  <span class="tpl">шаблон: штатный виджет новостей, два инфоблока</span>
+  <div class="grid g2">
+    <div>
+      <h2><small>новости</small>Что нового</h2>
+      <div class="card" style="margin-bottom:10px"><h3>Заголовок новости</h3><p>дата · два-три предложения</p></div>
+      <div class="card"><h3>Заголовок новости</h3><p>дата · два-три предложения</p></div>
+    </div>
+    <div>
+      <h2><small>статьи</small>Разбираем по делу</h2>
+      <div class="card" style="margin-bottom:10px"><h3>Как выбрать станок лазерной резки, часть 1</h3><p>со старого сайта</p></div>
+      <div class="card"><h3>Управляемые оси ЧПУ: что это и зачем</h3><p>со старого сайта</p></div>
+    </div>
+  </div>
+  <div class="q y">Из старых новостей выбрасываем демо-заглушки News 1-4 и проверяем даты. Дальше новости ведёт заказчик, нам нужен ответственный.</div>
+</div>
+
+<!-- 11. Форма -->
+<div class="blk dark">
+  <span class="tag">11 · Заявка</span>
+  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: штатная веб-форма, письмо на почту менеджера</span>
+  <h2><small>заявка</small>Не нашли нужную позицию?</h2>
+  <p class="sub">Пришлите артикул, марку станка или фото инструмента. Менеджер ответит в рабочее время.</p>
+  <div class="form">
+    <input placeholder="Имя"><input placeholder="Телефон"><input placeholder="Почта">
+    <textarea placeholder="Что нужно"></textarea>
+    <label>☐ Согласен на обработку персональных данных</label>
+    <div><a class="btn" href="#">Отправить</a></div>
+  </div>
+</div>
+
+<!-- 12. Футер -->
+<div class="blk foot" style="border-top:0">
+  <span class="tag">12 · Футер</span>
+  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: штатный подвал, 4 колонки</span>
+  <div class="grid g4" style="margin-top:14px">
+    <div><h4>Компания</h4><ul><li>О компании</li><li>Партнёры</li><li>Производство</li><li>Проекты</li><li>Отзывы</li><li>Сертификаты</li><li>Вакансии</li></ul></div>
+    <div><h4>Каталог</h4><ul><li>Пробивной инструмент</li><li>Гибочный инструмент</li><li>Расходники для лазера</li><li>Станки</li><li>Сервис</li></ul></div>
+    <div><h4>Помощь</h4><ul><li>Как купить</li><li>Оплата</li><li>Доставка</li><li>Гарантия</li><li>Рассрочка и лизинг</li><li>Субсидии</li></ul></div>
+    <div><h4>Контакты</h4><ul><li>Санкт-Петербург</li><li>Москва</li><li>Ставрополь</li><li>eav@barus.tools</li><li>Заказать звонок</li></ul></div>
+  </div>
+  <div class="low"><span>© BARUS, 2026</span><span>Политика ПДн · Согласие на обработку · Cookies</span></div>
+</div>
+
+</div>
+
+<div class="note" style="margin-top:20px">
+  Что изменилось в схеме против первой версии: блоки идут по согласованной таблице из 12 позиций, у каждого подписано, чем закрывается в INTEC.Prom. Бренды, акции и ведение новостей помечены жёлтым, это вопросы к заказчику. Заявка вынесена в первый экран второй кнопкой, потому что юрлица покупают через счёт, а не через корзину.
+</div>
+
+</body>
+</html>
