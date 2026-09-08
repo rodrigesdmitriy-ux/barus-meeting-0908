@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Состав главной страницы barus.tools на шаблоне INTEC.Prom</title>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Предварительная схема главной + структура</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -19,7 +19,7 @@ a{color:#0e6d73}
 img{max-width:100%;border:1px solid #e3e7ec}
 li{margin:4px 0}
 @media print{body{background:#fff}.wrap{padding:0}h2{break-after:avoid}tr{break-inside:avoid}}
-</style></head><body><div class="wrap"><h1>Состав главной страницы barus.tools на шаблоне INTEC.Prom</h1>
+</style></head><body><div class="wrap"><h1>Предварительная схема главной + структура</h1>
 <h2>Блоки главной (сверху вниз)</h2>
 <table>
 <thead>
@@ -112,32 +112,4 @@ li{margin:4px 0}
 <h3>Схема рекомендованной структуры</h3>
 <p><a href="site-tree.svg" target="_blank">Открыть схему отдельно</a></p>
 <img src="site-tree.svg" alt="Схема иерархии нового сайта barus.tools" style="width:100%;border:1px solid #e3e7ec;border-radius:6px">
-<h3>Текстовое дерево</h3><p>Сокращённо, полная версия с комментариями в xlsx выше.</p>
-<pre><code>Главная `/`
-  1. Хедер · 2. Первый экран · 3. Плитки 5 направлений каталога
-  4. Лого-лента производителей · 5. Блок преимуществ
-  6. Топ-категории по номенклатуре · 7. Вход в калькуляторы
-  8. Сервис · 9. Проекты/кейсы · 10. Новости и статьи
-  11. Форма обратной связи · 12. Футер
-Каталог `/catalog/`
-  - Пробивной инструмент KETEC `/catalog/punchtools/`
-    - Thick Turret, Murata/Salvagnini/Thin Turret, Trumpf, Формовочный, Роликовый
-  - Гибочный инструмент `/catalog/bendingtools/`
-    - Amada Promecam (519 карточек), Wila, Bystronic, Trumpf, LVD и ещё 5 подраздела
-  - Расходники для лазерной резки `/catalog/laser_comsumables/`
-    - Precitec, Raytools/Bodor, WSX, прочие расходники, Bystronic, Trumpf, Raycus
-  - Станки `/catalog/machines/`
-    - Листогибочные прессы EKO, лазерная резка металла/труб HSG, комбинированные, КПП, сварка
-Сервис `/service/`: вынесен из каталога
-Производители `/brands/`: вынесен из partners/postavshchiki/, штатный раздел шаблона
-Акции `/sale/`: вынесен из about/sale/ в верхний уровень
-Помощь `/help/`: Доставка, Оплата, Гарантия, Рассрочка, Лизинг, Субсидии, Как купить (всё с нуля)
-Техническая информация `/tech-info/`: + калькулятор тоннажа
-О компании `/about/` · Партнёры `/partners/` · Проекты `/projects/` · Производство `/tool_manufacturing/`
-Новости `/news/` · Статьи `/articles/` · Отзывы `/reviews/` (с нуля) · Сертификаты `/certificates/` (с нуля)
-Контакты `/contacts/`: 3 офиса (СПб, Москва, Ставрополь), у каждого свой менеджер
-Сравнение товаров `/compare/` · Поиск `/search/` · Карта сайта · Вакансии
-Правовые страницы `/legal/`: ПДн, согласие, cookies (готовят юристы)
-Выбрасываем: 11 битых content/detail.php и другие адреса с 404 (страницы RICO и Barus by TPTooling собираем заново), smtpconfig.php, дубль projects/index2.php, демо-новости News 1-4,
-служебные about/_bikipedia и about/_webinars, вебинары MashExpo 2014-2015
-</code></pre></div></body></html>
+</div></body></html>
