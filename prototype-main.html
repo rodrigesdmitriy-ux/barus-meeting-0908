@@ -3,270 +3,295 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Схема главной barus.tools · 12 блоков</title>
+<title>Главная barus.tools — схема из штатных блоков INTEC.Prom</title>
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#141719;--td:#232323;--bt:#009681;--line:#e3e6e8;--y:#fff3b0;--yb:#e0b400;--muted:#6b7378}
-*{box-sizing:border-box}
-body{margin:0;background:#eef0f2;font-family:Montserrat,Arial,sans-serif;color:var(--td);font-size:14px;line-height:1.45}
-h1,h2,h3,.ru{font-family:'Russo One',Montserrat,sans-serif;font-weight:400;letter-spacing:.2px}
-.page{max-width:1240px;margin:24px auto 60px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.08)}
-.note{max-width:1240px;margin:20px auto 0;font-size:13px;color:var(--muted)}
-.note b{color:var(--td)}
-.y{background:var(--y);border-bottom:2px solid var(--yb)}
-.blk{position:relative;padding:36px 48px;border-top:1px solid var(--line)}
-.blk .tag{position:absolute;left:0;top:0;background:var(--td);color:#fff;font-size:11px;padding:4px 10px;font-family:Montserrat;letter-spacing:.5px}
-.blk .tpl{position:absolute;right:0;top:0;font-size:11px;padding:4px 10px;color:var(--muted);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
-.blk h2{margin:0 0 6px;font-size:24px}
-.blk h2 small{display:block;font-family:Montserrat;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--bt);margin-bottom:6px}
-.sub{color:var(--muted);margin:0 0 20px;max-width:720px}
-.dark{background:var(--bg);color:#fff}
-.dark .sub{color:#b8bec2}
-.dark h2 small{color:#4fd1b8}
-.grid{display:grid;gap:14px}
-.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
-.card{border:1px solid var(--line);padding:18px;background:#fff;min-height:96px}
-.card h3{margin:0 0 6px;font-size:15px}
-.card p{margin:0;color:var(--muted);font-size:13px}
-.card .cnt{font-family:'Russo One';font-size:28px;color:var(--bt);display:block;margin-bottom:6px}
-.btn{display:inline-block;padding:12px 22px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.6px;background:var(--bt);color:#fff;text-decoration:none}
-.btn.o{background:transparent;border:2px solid #fff;color:#fff}
-.btn.d{background:var(--td)}
-.ph{background:repeating-linear-gradient(45deg,#f2f4f5,#f2f4f5 8px,#e8ebed 8px,#e8ebed 16px);border:1px dashed #c9ced2;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;text-align:center;padding:10px}
-.ico{width:44px;height:44px;border:2px solid var(--bt);border-radius:6px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--bt);font-weight:600}
-/* header */
-.top{display:flex;justify-content:space-between;align-items:center;padding:12px 48px;font-size:12px;border-bottom:1px solid var(--line);color:var(--muted)}
-.top span+span{margin-left:22px}
-.hdr{display:flex;align-items:center;gap:28px;padding:16px 48px}
-.logo{font-family:'Russo One';font-size:28px;color:var(--td)}
-.logo i{color:var(--bt);font-style:normal}
-.search{flex:1;border:1px solid var(--line);padding:10px 14px;color:var(--muted);font-size:13px}
-.cart{border:1px solid var(--line);padding:10px 14px;font-size:12px}
-.menu{display:flex;background:var(--td);color:#fff;padding:0 48px}
-.menu div{padding:14px 20px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
-.menu div:first-child{background:var(--bt)}
-.menu .r{margin-left:auto;font-weight:500;text-transform:none;color:#c9ced2}
-/* hero */
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:56px 48px}
-.hero h1{font-size:40px;line-height:1.15;margin:0 0 16px}
-.hero h1 span{color:#4fd1b8}
-.hero p{color:#c9ced2;font-size:15px;max-width:560px;margin:0 0 26px}
-.hero .btn+.btn{margin-left:12px}
-.hero .ph{height:300px;background:repeating-linear-gradient(45deg,#1c2023,#1c2023 8px,#22272a 8px,#22272a 16px);border-color:#3a4145;color:#8a9297}
-/* logos */
-.logos{display:flex;flex-wrap:wrap;gap:10px}
-.logos span{border:1px solid var(--line);padding:12px 18px;font-family:'Russo One';font-size:14px;color:#555;background:#fff;min-width:120px;text-align:center}
-.logos span.y{color:#7a5d00}
-.logos .lbl{border:0;min-width:0;padding:12px 6px 12px 0;font-family:Montserrat;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);text-align:left;flex-basis:100%}
-/* form */
-.form{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-.form input,.form textarea{width:100%;border:1px solid var(--line);padding:12px;font-family:inherit;font-size:13px;background:#fff}
-.form textarea{grid-column:1/-1;height:70px}
-.form label{grid-column:1/-1;font-size:12px;color:var(--muted)}
-/* footer */
-.foot{background:var(--bg);color:#c9ced2;padding:40px 48px 24px;font-size:13px}
-.foot h4{color:#fff;margin:0 0 12px;font-family:'Russo One';font-weight:400;font-size:14px}
-.foot ul{list-style:none;margin:0;padding:0}
-.foot li{margin:0 0 7px}
-.foot .low{border-top:1px solid #2c3236;margin-top:30px;padding-top:16px;font-size:12px;color:#8a9297;display:flex;justify-content:space-between}
-.legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.legend i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:6px;border:1px solid #ccc}
-.q{font-size:12px;color:#7a5d00;padding:8px 12px;margin-top:14px;display:inline-block}
+  :root{--bt:#42c1c7;--td:#232323;--muted:#6b7280;--line:#e5e7eb;--bg:#f6f7f9;--yb:#fff7cc;--ok:#e8f7ee;--warn:#fff3e0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Montserrat,Tahoma,sans-serif;color:var(--td);background:#fff;line-height:1.45;font-size:15px}
+  h1,h2,h3{font-family:'Russo One',Montserrat,sans-serif;font-weight:400;margin:0}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .top{background:var(--td);color:#fff;padding:28px 0}
+  .top h1{font-size:26px;margin-bottom:8px}
+  .top p{margin:4px 0;color:#cfd3d8;font-size:14px}
+  .top a{color:var(--bt)}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;margin-top:12px}
+  .legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .legend .a::before{background:var(--ok)}.legend .b::before{background:var(--yb)}.legend .c::before{background:var(--warn)}
+  .toc{background:var(--bg);border-bottom:1px solid var(--line);padding:14px 0;font-size:13px}
+  .toc ol{margin:0;padding-left:20px;columns:3;column-gap:30px}
+  .toc li{margin:2px 0}
+  .blk{display:grid;grid-template-columns:520px 1fr;gap:26px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .blk .n{font-family:'Russo One';font-size:13px;color:var(--bt);letter-spacing:.06em;text-transform:uppercase}
+  .blk h2{font-size:20px;margin:4px 0 10px}
+  .blk .pv{position:relative}
+  .blk .pv img{width:100%;display:block;border:1px solid var(--line);border-radius:6px;background:#fff;image-rendering:auto}
+  .blk .pv .cap{font-size:12px;color:var(--muted);margin-top:6px}
+  .blk .pv .cap b{color:var(--td)}
+  .tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--bg);border:1px solid var(--line);margin:0 4px 4px 0}
+  .tag.k{background:#e6f7f8;border-color:#b7e6e8}
+  .fill{background:var(--ok);border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+  .fill b{display:block;margin-bottom:4px;font-family:'Russo One';font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:#1f7a45}
+  .fill ul{margin:6px 0 0;padding-left:18px}
+  .why{background:var(--yb);border-radius:8px;padding:10px 14px;margin:8px 0;font-size:13px}
+  .why b{color:#8a6d00}
+  .alt{font-size:13px;color:var(--muted);margin-top:8px}
+  .alt img{width:110px;height:53px;object-fit:cover;border:1px solid var(--line);border-radius:4px;vertical-align:middle;margin:2px 6px 2px 0}
+  .alt span{display:inline-block;margin-right:14px;font-size:12px}
+  .off{background:var(--warn);padding:20px 0}
+  .off h2{font-size:18px;margin-bottom:8px}
+  .off ul{columns:3;column-gap:30px;margin:0;padding-left:18px;font-size:13px}
+  .set{padding:26px 0}
+  .set h2{font-size:20px;margin-bottom:10px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  td,th{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+  th{background:var(--bg);font-weight:600}
+  .foot{padding:20px 0 40px;font-size:12px;color:var(--muted)}
+  @media(max-width:900px){.blk{grid-template-columns:1fr}.toc ol,.off ul{columns:1}}
 </style>
 </head>
 <body>
 
-<div class="note">
-  <div class="legend">
-    <b>Схема главной barus.tools, шаблон INTEC.Prom</b>
-    <span><i style="background:var(--y);border-color:var(--yb)"></i>жёлтое: решает заказчик</span>
-    <span><i style="background:#f2f4f5;border-style:dashed"></i>штриховка: место под фото или картинку</span>
-    <span>подпись справа вверху каждого блока: чем закрывается в шаблоне</span>
+<div class="top"><div class="wrap">
+  <h1>Главная barus.tools — схема из штатных блоков INTEC.Prom</h1>
+  <p>Принцип: ничего не разрабатываем. Берём только готовые блоки шаблона INTEC.Prom (панель «Точная настройка» → «Блоки главной страницы», демо <a href="https://www.promcrm.ru/" target="_blank">promcrm.ru</a>) и выбираем для каждого штатный вариант. Превью — реальные картинки вариантов из панели шаблона.</p>
+  <p>Всего в шаблоне 28 типов блоков главной, 149 вариантов оформления + 19 шапок + 6 футеров. Ниже — 16 блоков, которые собираем в главную, и 12, которые выключаем.</p>
+  <div class="legend"><span class="a">чем наполняем (контент Barus)</span><span class="b">почему этот вариант</span><span class="c">блоки, которые выключаем</span></div>
+</div></div>
+
+<div class="toc"><div class="wrap"><ol>
+  <li>Шапка — Тип 4</li><li>Баннер — Тип 5</li><li>Преимущества — Иконки 2</li><li>Разделы каталога — Плитки 2</li>
+  <li>Товары — Плитки 3 (вкладки)</li><li>Баннеры с текстом — Плитки 8</li><li>Бренды — Слайдер 2</li><li>Услуги — Плитки 8</li>
+  <li>О компании — Блок 2</li><li>Цифры — Цифры 5</li><li>Этапы работ — Плитки 2</li><li>Проекты/поставки — Плитки 2</li>
+  <li>Отзывы — Слайдер 7</li><li>Вопрос‑ответ — Узкий 1</li><li>Новости — Плитки 1</li><li>Контакты — Список 1 + CTA‑полоса + Футер Тип 5</li>
+</ol></div></div>
+
+<div class="wrap">
+
+<!-- 1 -->
+<section class="blk" id="b1">
+  <div class="pv"><img src="screenshots/intec-variants/header-template__4.png" alt=""><div class="cap"><b>header-template → Тип 4</b> · логотип · поиск по каталогу · адрес/почта · телефон + «Заказать звонок» · сравнение/избранное/корзина · синяя полоса с разделами каталога</div></div>
+  <div><div class="n">01 · Шапка</div><h2>Тип 4: поиск в шапке + полоса разделов каталога</h2>
+    <span class="tag k">header-template = 4</span><span class="tag">фиксация при скролле: да</span><span class="tag">цвет полосы: чёрный/тёмный Barus (#232323)</span>
+    <div class="fill"><b>Наполняем</b>Логотип Barus · поиск «Артикул, станок, тип инструмента» · СПб + Ленобласть, телефон · «Заказать звонок» · полоса: Гибочный инструмент · Пробивной инструмент · Лазерные комплектующие · Ножи гильотинные · Оснастка и расходники · Станки · Услуги · Бренды</div>
+    <div class="why"><b>Почему:</b> B2B‑покупатель приходит с артикулом/станком → поиск должен быть в шапке, а не по клику. Полоса разделов сразу показывает 6 направлений каталога без бургера.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/header-template__6.png">Тип 6 (белая полоса)</span><span><img src="screenshots/intec-variants/header-template__1.png">Тип 1 (широкое меню)</span></div>
   </div>
-</div>
+</section>
 
-<div class="page">
-
-<!-- 1. Хедер -->
-<div class="blk" style="padding:0;border-top:0">
-  <span class="tag">1 · Хедер</span>
-  <span class="tpl">шаблон: штатная шапка, настройки без правок кода</span>
-  <div class="top" style="padding-top:30px">
-    <div><span>Санкт-Петербург ▾</span><span>пн-пт 9:00-18:00</span></div>
-    <div><span>+7 (___) ___-__-__</span><span>eav@barus.tools</span><span style="color:var(--bt);font-weight:600">Заказать звонок</span></div>
+<!-- 2 -->
+<section class="blk" id="b2">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__banner__5.png" alt=""><div class="cap"><b>banner → Тип 5</b> · большой слайдер на всю ширину + под ним ряд «Популярные категории» с картинками</div></div>
+  <div><div class="n">02 · Баннер (первый экран)</div><h2>Тип 5: слайдер + быстрые категории под ним</h2>
+    <span class="tag k">banner = 5</span><span class="tag">2–3 слайда</span><span class="tag">под баннером 6 категорий</span>
+    <div class="fill"><b>Наполняем</b><ul>
+      <li>Слайд 1: «Инструмент для листогибов и координатно‑пробивных прессов. Собственный бренд BARUS + Amada, Trumpf, Wila, Bystronic, LVD» → кнопка «Подобрать инструмент»</li>
+      <li>Слайд 2: «BARUS PREMIUM PRC — гибочный инструмент со склада в СПб, отгрузка 1–3 дня»</li>
+      <li>Слайд 3: «Заточка и ремонт инструмента в собственном сервисном центре»</li>
+      <li>Быстрые категории: Гибочный · Пробивной · Лазер · Ножи · Оснастка · Станки</li></ul></div>
+    <div class="why"><b>Почему:</b> единственный вариант баннера, где категории идут прямо под слайдом — первый экран сразу «продаёт» и навигацию, и УТП. Тип 11 (с цифрами) — запасной, если хотим на первый экран «20 лет / 5000 позиций / 1–3 дня».</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__banner__11.png">Тип 11 (цифры на баннере)</span><span><img src="screenshots/intec-variants/pages-main-blocks__banner__9.png">Тип 9 (слайд + 2 мини‑баннера)</span></div>
   </div>
-  <div class="hdr">
-    <div class="logo">BARUS<i>.</i></div>
-    <div class="search">Поиск по артикулу или названию</div>
-    <div class="cart">Сравнение</div>
-    <div class="cart">Корзина</div>
-    <div class="cart">Войти</div>
+</section>
+
+<!-- 3 -->
+<section class="blk" id="b3">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__advantages__icons.2.png" alt=""><div class="cap"><b>advantages → Иконки 2</b> · 5 иконок в ряд на сером фоне, короткий заголовок + 1 строка</div></div>
+  <div><div class="n">03 · Преимущества</div><h2>Иконки 2: пять коротких УТП</h2>
+    <span class="tag k">advantages = icons.2</span><span class="tag">5 элементов</span>
+    <div class="fill"><b>Наполняем</b>Собственный бренд BARUS · Склад в СПб, отгрузка 1–3 дня · Подбор под ваш станок · Заточка и ремонт · Гарантия и сертификаты</div>
+    <div class="why"><b>Почему:</b> тонкая полоса, не отвлекает от каталога. Числа («о нас в цифрах») выносим ниже, в блок 10, чтобы не дублировать.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__advantages__tiles.1.png">Плитки 1 (1‑2‑3‑4)</span><span><img src="screenshots/intec-variants/pages-main-blocks__advantages__icons.1.png">Иконки 1 (белый фон)</span></div>
   </div>
-  <div class="menu">
-    <div>Каталог ▾</div><div>Пробивной инструмент</div><div>Гибочный инструмент</div><div>Расходники для лазера</div><div>Станки</div><div>Сервис</div>
-    <div class="r">Производители · Проекты · Техинформация · О компании · Контакты</div>
+</section>
+
+<!-- 4 -->
+<section class="blk" id="b4">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__sections__tiles.2.png" alt=""><div class="cap"><b>sections → Плитки 2</b> · «Популярные разделы»: тёмные фото‑плитки 4 в ряд, название + кол‑во товаров</div></div>
+  <div><div class="n">04 · Разделы каталога</div><h2>Плитки 2: 8 фото‑плиток разделов</h2>
+    <span class="tag k">sections = tiles.2</span><span class="tag">8 плиток (2 ряда × 4)</span><span class="tag">фото из карточек товаров</span>
+    <div class="fill"><b>Наполняем</b>Гибочный инструмент (Promecam / Trumpf / Wila / Bystronic / LVD) · Пробивной инструмент (Thick Turret / Thin Turret / Murata / Salvagnini) · Лазерные комплектующие (Raytools, Precitec, WSX, Raycus) · Ножи для гильотин · Оснастка и расходники · Станки и оборудование · BARUS PREMIUM PRC · BARUS JAPAN</div>
+    <div class="why"><b>Почему:</b> главный сценарий B2B — «найти свой раздел». Фото‑плитки с чёрным фоном совпадают со стилем Barus (чёрный/бирюза) и читаются лучше, чем иконки в «Список 1».</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__sections__tiles.1.png">Плитки 1 (белые)</span><span><img src="screenshots/intec-variants/pages-main-blocks__sections__list.1.png">Список 1 (с подразделами)</span></div>
   </div>
-</div>
+</section>
 
-<!-- 2. Первый экран -->
-<div class="blk dark hero">
-  <span class="tag">2 · Первый экран</span>
-  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: слайдер отключаем, ставим один статичный баннер</span>
-  <div>
-    <h1>Инструмент для станков листообработки. <span>Оригинал и совместимый.</span></h1>
-    <p>Пробивной KETEC, гибочный под Amada Promecam, Trumpf, Wila, Bystronic, LVD, расходники для лазерной резки. Офисы в Петербурге, Москве и Ставрополе, у каждого свой менеджер.</p>
-    <a class="btn" href="#">В каталог</a><a class="btn o" href="#">Оставить заявку</a>
+<!-- 5 -->
+<section class="blk" id="b5">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__products__tiles.3.png" alt=""><div class="cap"><b>products → Плитки 3</b> · «Популярные товары» с вкладками, карточки с ценой, наличием и кнопкой</div></div>
+  <div><div class="n">05 · Товары</div><h2>Плитки 3: хиты / новинки / акции во вкладках</h2>
+    <span class="tag k">products = tiles.3</span><span class="tag">вкладки: Хиты · Новинки · Со склада</span><span class="tag">8 карточек</span>
+    <div class="fill"><b>Наполняем</b>Вкладка «Со склада СПб» — ключевая: пуансоны/матрицы BARUS PREMIUM PRC, сопла и линзы для лазера, ножи. Цена + «в наличии» + «в корзину». Для позиций «по запросу» — кнопка «Запросить КП».</div>
+    <div class="why"><b>Почему:</b> единственный вариант с вкладками + компактными карточками. «Плитки 3 с большим элементом» подходит для акцентного товара дня — у Barus такого нет.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__products__slider.1.png">Слайдер 1</span><span><img src="screenshots/intec-variants/pages-main-blocks__products__tiles.3.big.png">Плитки 3 с большим элементом</span></div>
   </div>
-  <div class="ph">фото инструмента или станка<br>из фотобанка заказчика</div>
-</div>
+</section>
 
-<!-- 3. Плитки -->
-<div class="blk">
-  <span class="tag">3 · Направления каталога</span>
-  <span class="tpl">шаблон: блок «Категории каталога», иконки из брендбука</span>
-  <div class="grid g5">
-    <div class="card"><div class="ico">ico</div><h3>Пробивной инструмент</h3><p>KETEC. Thick Turret, Thin Turret, Trumpf, формовочный, роликовый</p></div>
-    <div class="card"><div class="ico">ico</div><h3>Гибочный инструмент</h3><p>Amada Promecam, Wila, Bystronic, Trumpf, LVD</p></div>
-    <div class="card"><div class="ico">ico</div><h3>Расходники для лазера</h3><p>Precitec, Raytools, WSX, Raycus, Bystronic, Trumpf</p></div>
-    <div class="card"><div class="ico">ico</div><h3>Станки</h3><p>Листогибы, лазерная резка, КПП, сварка</p></div>
-    <div class="card"><div class="ico">ico</div><h3>Сервис</h3><p>Заточка и восстановление пробивного инструмента</p></div>
+<!-- 6 -->
+<section class="blk" id="b6">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__categories__tiles.8.png" alt=""><div class="cap"><b>categories → Плитки 8</b> · 3 цветных промо‑баннера в ряд: заголовок, подпись, картинка</div></div>
+  <div><div class="n">06 · Баннеры с текстом (промо)</div><h2>Плитки 8: три промо собственного бренда</h2>
+    <span class="tag k">categories = tiles.8</span><span class="tag">3 баннера</span>
+    <div class="fill"><b>Наполняем</b>BARUS PREMIUM PRC — «премиум‑гибочный, аналог Amada Promecam» · BARUS JAPAN — «японская сталь, для Trumpf/Wila» · Изготовление по чертежу — «нестандартный инструмент за 10–20 дней»</div>
+    <div class="why"><b>Почему:</b> это «витрина брендов Barus» между каталогом и внешними брендами. Плитки 8 — единственный вариант с цветной подложкой под свой стиль (чёрный/бирюза/жёлтый).</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__categories__block.1.png">Блок 1 (один широкий баннер)</span><span><img src="screenshots/intec-variants/pages-main-blocks__categories__tiles.6.png">Плитки 6 (тёмная полоса)</span></div>
   </div>
-</div>
+</section>
 
-<!-- 4. Лого-лента -->
-<div class="blk">
-  <span class="tag">4 · Производители</span>
-  <span class="tpl">шаблон: блок «Бренды», подтягивается из раздела /brands/</span>
-  <div class="logos">
-    <span>KETEC</span><span>Amada Promecam</span><span>Trumpf</span><span>Wila</span><span>Bystronic</span><span>LVD</span><span>Raycus</span><span>Raytools / Bodor</span><span>Precitec</span><span>WSX</span>
-    <span class="y">Abamet</span><span class="y">HighPower</span><span class="y">HSG</span>
+<!-- 7 -->
+<section class="blk" id="b7">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__brands__slider.2.png" alt=""><div class="cap"><b>brands → Слайдер 2</b> · заголовок, ссылка «все бренды», логотипы в рамках, стрелки</div></div>
+  <div><div class="n">07 · Бренды</div><h2>Слайдер 2: логотипы станков и производителей</h2>
+    <span class="tag k">brands = slider.2</span><span class="tag">12–16 логотипов</span><span class="tag">клик → раздел каталога по бренду</span>
+    <div class="fill"><b>Наполняем</b>Amada · Trumpf · Wila · Bystronic · LVD · Murata · Salvagnini · Raytools · Precitec · WSX · Raycus · Abamet · HighPower · RICO · BARUS</div>
+    <div class="why"><b>Почему:</b> покупатель ищет «инструмент под мой станок» — бренд станка = точка входа. Слайдер с рамками смотрится аккуратно на чёрно‑белых логотипах.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__brands__tiles.3.png">Плитки 3 (с текстом слева)</span><span><img src="screenshots/intec-variants/pages-main-blocks__brands__tiles.1.png">Плитки 1</span></div>
   </div>
-  <div class="q y">Abamet и HighPower на старом сайте стоят как референсы, а не как бренды каталога. HSG есть и как страница дилерства, и как разделы станков. Показывать ли эти три в ленте?</div>
-</div>
+</section>
 
-<!-- 5. Преимущества -->
-<div class="blk dark">
-  <span class="tag">5 · Почему у нас</span>
-  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: блок «Преимущества», 5 карточек</span>
-  <h2><small>почему мы</small>Работаем с производствами по всей России</h2>
-  <div class="grid g5">
-    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Оригинал и совместимый</h3><p>Под один и тот же станок даём оба варианта, разница в цене видна сразу</p></div>
-    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Склад</h3><p>Ходовые позиции лежат, отгрузка без ожидания производства</p></div>
-    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Заточка и сервис</h3><p>Свой центр обслуживания пробивного инструмента</p></div>
-    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Доставка по РФ</h3><p>Отгружаем в любой регион, офисы в Петербурге, Москве и Ставрополе</p></div>
-    <div class="card" style="background:#1c2023;border-color:#2c3236"><h3 style="color:#fff">Для юрлиц</h3><p>Заявка, счёт, закрывающие документы. Мелочь можно оплатить картой в корзине</p></div>
+<!-- 8 -->
+<section class="blk" id="b8">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__services__tiles.8.png" alt=""><div class="cap"><b>services → Плитки 8</b> · слева заголовок + текст, справа 6 фото‑плиток услуг</div></div>
+  <div><div class="n">08 · Услуги</div><h2>Плитки 8: сервисный центр в шести плитках</h2>
+    <span class="tag k">services = tiles.8</span><span class="tag">6 услуг</span><span class="tag">ссылка на /catalog/uslugi_tsentra_servisnykh_uslug/</span>
+    <div class="fill"><b>Наполняем</b>Слева: «Сервисный центр Barus в СПб». Плитки: Заточка инструмента · Ремонт и восстановление · Изготовление по чертежу · Подбор под станок · Выезд к клиенту / диагностика · Обучение операторов</div>
+    <div class="why"><b>Почему:</b> услуги — второй по важности источник заявок, но не должны спорить с каталогом. Плитки 8 дают текст‑объяснение + компактные фото, без «пафосных» тёмных плит (Плитки 5).</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__services__tabs.2.png">Вкладки 2 (с ценой «от»)</span><span><img src="screenshots/intec-variants/pages-main-blocks__services__tiles.9.png">Плитки 9 (с подуслугами)</span></div>
   </div>
-</div>
+</section>
 
-<!-- 6. Топ-категории -->
-<div class="blk">
-  <span class="tag">6 · Самые большие разделы</span>
-  <span class="tpl">шаблон: блок «Популярные категории», выбор разделов вручную</span>
-  <h2><small>популярное</small>Куда заходят чаще всего</h2>
-  <p class="sub">Порядок по объёму номенклатуры на старом сайте, а не по догадке.</p>
-  <div class="grid g3">
-    <div class="card"><span class="cnt">519</span><h3>Amada Promecam</h3><p>Гибочный инструмент: пуансоны, матрицы, держатели</p></div>
-    <div class="card"><span class="cnt">142</span><h3>Thick Turret</h3><p>Пробивной инструмент для револьверных прессов</p></div>
-    <div class="card"><span class="cnt">93</span><h3>Murata / Salvagnini / Thin Turret</h3><p>Пробивной инструмент</p></div>
+<!-- 9 -->
+<section class="blk" id="b9">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__about__block.2.png" alt=""><div class="cap"><b>about → Блок 2</b> · круглое фото/видео слева, заголовок, абзац, 4 иконки‑факта, кнопка</div></div>
+  <div><div class="n">09 · О компании</div><h2>Блок 2: коротко о Barus + 4 факта</h2>
+    <span class="tag k">about = block.2</span><span class="tag">видео с производства (опц.)</span>
+    <div class="fill"><b>Наполняем</b>«Barus Instruments — производитель и поставщик инструмента для листообработки с 20XX года». Факты: Собственное производство · Склад в СПб · Сервисный центр · Поставки по РФ и СНГ. Кнопка «Подробнее о компании».</div>
+    <div class="why"><b>Почему:</b> Блок 1 — размытое фото на весь экран, «ничего не говорит». Блок 2 держит текст + факты в одной плоскости и не выглядит как лендинг.</div>
+    <div class="alt">Альтернатива: <span><img src="screenshots/intec-variants/pages-main-blocks__about__block.1.png">Блок 1 (широкий фон)</span></div>
   </div>
-</div>
+</section>
 
-<!-- Акции: место -->
-<div class="blk y" style="padding:22px 48px">
-  <span class="tag">Акции</span>
-  <span class="tpl" style="border-color:var(--yb)">шаблон: блок «Акции», включается в настройках</span>
-  <div style="color:#7a5d00;font-size:13px">Место под блок оставляем. На старом сайте все 8 акций в архиве. Будут ли регулярные акции и кто их ведёт, отвечает маркетинг заказчика. До ответа блок выключен.</div>
-</div>
-
-<!-- 7. Техинформация -->
-<div class="blk">
-  <span class="tag">7 · Техинформация и калькуляторы</span>
-  <span class="tpl">шаблон: блок «Услуги» или инфоблок с иконками; сами калькуляторы переезжают со старого сайта</span>
-  <h2><small>инженерам</small>Посчитать и проверить перед заказом</h2>
-  <div class="grid g4">
-    <div class="card"><h3>Калькулятор тоннажа</h3><p>Для пробивного инструмента. Сейчас живёт на /tech-info/</p></div>
-    <div class="card"><h3>Калькулятор гибки</h3><p>Усилие гибки по толщине и раскрытию матрицы</p></div>
-    <div class="card"><h3>Таблицы</h3><p>Скорости лазерной резки листа и трубы, усилия гибки, зазоры пробивного инструмента</p></div>
-    <div class="card"><h3>Статьи</h3><p>Как выбрать станок лазерной резки, управляемые оси ЧПУ, гибочный и пробивной инструмент</p></div>
+<!-- 10 -->
+<section class="blk" id="b10">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__advantages__numbers.5.png" alt=""><div class="cap"><b>advantages (2‑й экземпляр) → Цифры 5</b> · слева текст + кнопка, справа 6 цифр</div></div>
+  <div><div class="n">10 · О нас в цифрах</div><h2>Цифры 5: шесть чисел и кнопка «Получить КП»</h2>
+    <span class="tag k">advantages = numbers.5</span><span class="tag">второй блок «Преимущества» (шаблон допускает несколько)</span>
+    <div class="fill"><b>Наполняем</b>20+ лет · 5 000+ позиций на складе · 1–3 дня отгрузка · 700+ клиентов · 15 брендов станков · 2 года гарантии. Кнопка «Запросить КП».</div>
+    <div class="why"><b>Почему:</b> цифры + CTA после «О компании» закрывают доверие. Цифры 3 (круги) — слишком «стартаперский» вид для промышленной B2B.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__advantages__numbers.1.png">Цифры 1</span><span><img src="screenshots/intec-variants/pages-main-blocks__advantages__numbers.2.png">Цифры 2</span></div>
   </div>
-</div>
+</section>
 
-<!-- 8. Сервис -->
-<div class="blk dark" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
-  <span class="tag">8 · Сервис</span>
-  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: блок «Текст + картинка», раздел /service/</span>
-  <div>
-    <h2><small>сервисный центр</small>Заточка и обслуживание пробивного инструмента</h2>
-    <p class="sub">Затачиваем на станке BARUS GRINDER PRO. Восстанавливаем геометрию, меняем расходники, возвращаем инструмент в работу вместо покупки нового.</p>
-    <a class="btn" href="#">Подробнее о сервисе</a>
+<!-- 11 -->
+<section class="blk" id="b11">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__stages__tiles.2.png" alt=""><div class="cap"><b>stages → Плитки 2</b> · «Этапы работ» 1‑2‑3‑4 в ряд</div></div>
+  <div><div class="n">11 · Этапы работ</div><h2>Плитки 2: как купить — 4 шага</h2>
+    <span class="tag k">stages = tiles.2</span>
+    <div class="fill"><b>Наполняем</b>1. Заявка или звонок (артикул / чертёж / модель станка) → 2. Подбор и КП за 1 день → 3. Оплата по счёту, договор → 4. Отгрузка со склада 1–3 дня / изготовление 10–20 дней</div>
+    <div class="why"><b>Почему:</b> снимает вопрос «как у вас купить юрлицу». Плитки 1 (шахматка) занимает вдвое больше высоты.</div>
+    <div class="alt">Альтернатива: <span><img src="screenshots/intec-variants/pages-main-blocks__stages__tiles.1.png">Плитки 1</span></div>
   </div>
-  <div class="ph" style="height:220px;background:repeating-linear-gradient(45deg,#1c2023,#1c2023 8px,#22272a 8px,#22272a 16px);border-color:#3a4145;color:#8a9297">фото сервисного центра</div>
-</div>
+</section>
 
-<!-- 9. Проекты -->
-<div class="blk">
-  <span class="tag">9 · Проекты</span>
-  <span class="tpl">шаблон: инфоблок «Проекты» с карточками, раздел /projects/</span>
-  <h2><small>кейсы</small>Реализованные проекты</h2>
-  <p class="sub">Берём из старого раздела. Каждый проект по одной схеме: что стояло, что поставили, что получилось. С фото.</p>
-  <div class="grid g3">
-    <div class="card"><div class="ph" style="height:120px;margin-bottom:12px">фото</div><h3>Проект 1</h3><p>Задача · решение · результат</p></div>
-    <div class="card"><div class="ph" style="height:120px;margin-bottom:12px">фото</div><h3>Проект 2</h3><p>Задача · решение · результат</p></div>
-    <div class="card"><div class="ph" style="height:120px;margin-bottom:12px">фото</div><h3>Проект 3</h3><p>Задача · решение · результат</p></div>
+<!-- 12 -->
+<section class="blk" id="b12">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__projects__tiles.2.png" alt=""><div class="cap"><b>projects → Плитки 2</b> · «Наши проекты» с вкладками‑категориями, 4 фото‑карточки</div></div>
+  <div><div class="n">12 · Проекты / поставки</div><h2>Плитки 2: кейсы поставок и выставки</h2>
+    <span class="tag k">projects = tiles.2</span><span class="tag">вкладки: Поставки · Изготовление · Выставки (MashExpo)</span>
+    <div class="fill"><b>Наполняем</b>«Комплект инструмента для Trumpf TruBend, завод X» · «Нестандартные матрицы по чертежу» · «Стенд Barus на MashExpo» · «Оснащение нового цеха под ключ». Фото с производства/выставок.</div>
+    <div class="why"><b>Почему:</b> для B2B «кому уже поставляли» важнее отзывов‑текста. Плитки 1 (логотипы клиентов) — если нет фото; тогда переименовать в «Наши клиенты».</div>
+    <div class="alt">Альтернатива: <span><img src="screenshots/intec-variants/pages-main-blocks__projects__tiles.1.png">Плитки 1 (логотипы клиентов)</span></div>
   </div>
-</div>
+</section>
 
-<!-- 10. Новости и статьи -->
-<div class="blk">
-  <span class="tag">10 · Новости и статьи</span>
-  <span class="tpl">шаблон: штатный виджет новостей, два инфоблока</span>
-  <div class="grid g2">
-    <div>
-      <h2><small>новости</small>Что нового</h2>
-      <div class="card" style="margin-bottom:10px"><h3>Заголовок новости</h3><p>дата · два-три предложения</p></div>
-      <div class="card"><h3>Заголовок новости</h3><p>дата · два-три предложения</p></div>
-    </div>
-    <div>
-      <h2><small>статьи</small>Разбираем по делу</h2>
-      <div class="card" style="margin-bottom:10px"><h3>Как выбрать станок лазерной резки, часть 1</h3><p>со старого сайта</p></div>
-      <div class="card"><h3>Управляемые оси ЧПУ: что это и зачем</h3><p>со старого сайта</p></div>
-    </div>
+<!-- 13 -->
+<section class="blk" id="b13">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__reviews__slider.7.png" alt=""><div class="cap"><b>reviews → Слайдер 7</b> · слева заголовок + текст, справа 2 карточки отзыва с фото, звёздами и «подробнее»</div></div>
+  <div><div class="n">13 · Отзывы</div><h2>Слайдер 7: отзывы клиентов (юрлица)</h2>
+    <span class="tag k">reviews = slider.7</span><span class="tag">имя + должность + компания</span>
+    <div class="fill"><b>Наполняем</b>3–6 отзывов от главных технологов / начальников цехов. Вместо фото человека допустим логотип компании.</div>
+    <div class="why"><b>Почему:</b> текст слева объясняет блок, карточки компактные. Видео‑варианты (Видео 1/2) — на будущее, когда появятся ролики.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__reviews__slider.8.png">Слайдер 8 (3 карточки)</span><span><img src="screenshots/intec-variants/pages-main-blocks__reviews__video.2.png">Видео 2</span></div>
   </div>
-  <div class="q y">Из старых новостей выбрасываем демо-заглушки News 1-4 и проверяем даты. Дальше новости ведёт заказчик, нам нужен ответственный.</div>
-</div>
+</section>
 
-<!-- 11. Форма -->
-<div class="blk dark">
-  <span class="tag">11 · Заявка</span>
-  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: штатная веб-форма, письмо на почту менеджера</span>
-  <h2><small>заявка</small>Не нашли нужную позицию?</h2>
-  <p class="sub">Пришлите артикул, марку станка или фото инструмента. Менеджер ответит в рабочее время.</p>
-  <div class="form">
-    <input placeholder="Имя"><input placeholder="Телефон"><input placeholder="Почта">
-    <textarea placeholder="Что нужно"></textarea>
-    <label>☐ Согласен на обработку персональных данных</label>
-    <div><a class="btn" href="#">Отправить</a></div>
+<!-- 14 -->
+<section class="blk" id="b14">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__faq__narrow.1.png" alt=""><div class="cap"><b>faq → Узкий 1</b> · слева заголовок + текст + кнопка, справа аккордеон вопросов</div></div>
+  <div><div class="n">14 · Вопрос‑ответ</div><h2>Узкий 1: 5–6 типовых вопросов B2B</h2>
+    <span class="tag k">faq = narrow.1</span>
+    <div class="fill"><b>Наполняем</b>Подойдёт ли ваш инструмент к моему станку? · Сроки изготовления по чертежу · Работаете с НДС / по счёту? · Доставка по РФ, ТК · Гарантия и заточка · Минимальный заказ. Кнопка «Задать вопрос».</div>
+    <div class="why"><b>Почему:</b> «Широкий 1/2» — центрированный заголовок и много воздуха; «Узкий 1» плотнее и сразу с CTA.</div>
+    <div class="alt">Альтернатива: <span><img src="screenshots/intec-variants/pages-main-blocks__faq__wide.2.png">Широкий 2 (со вкладками)</span></div>
   </div>
-</div>
+</section>
 
-<!-- 12. Футер -->
-<div class="blk foot" style="border-top:0">
-  <span class="tag">12 · Футер</span>
-  <span class="tpl" style="color:#8a9297;border-color:#2c3236">шаблон: штатный подвал, 4 колонки</span>
-  <div class="grid g4" style="margin-top:14px">
-    <div><h4>Компания</h4><ul><li>О компании</li><li>Партнёры</li><li>Производство</li><li>Проекты</li><li>Отзывы</li><li>Сертификаты</li><li>Вакансии</li></ul></div>
-    <div><h4>Каталог</h4><ul><li>Пробивной инструмент</li><li>Гибочный инструмент</li><li>Расходники для лазера</li><li>Станки</li><li>Сервис</li></ul></div>
-    <div><h4>Помощь</h4><ul><li>Как купить</li><li>Оплата</li><li>Доставка</li><li>Гарантия</li><li>Рассрочка и лизинг</li><li>Субсидии</li></ul></div>
-    <div><h4>Контакты</h4><ul><li>Санкт-Петербург</li><li>Москва</li><li>Ставрополь</li><li>eav@barus.tools</li><li>Заказать звонок</li></ul></div>
+<!-- 15 -->
+<section class="blk" id="b15">
+  <div class="pv"><img src="screenshots/intec-variants/pages-main-blocks__news__tiles.1.png" alt=""><div class="cap"><b>news → Плитки 1</b> · 3 карточки: фото, дата, заголовок</div></div>
+  <div><div class="n">15 · Новости</div><h2>Плитки 1: три последние новости</h2>
+    <span class="tag k">news = tiles.1</span><span class="tag">статьи (articles) — выключаем, объединяем с новостями</span>
+    <div class="fill"><b>Наполняем</b>Поступление на склад · Участие в выставке · Новая линейка BARUS · Изменения цен/условий</div>
+    <div class="why"><b>Почему:</b> три карточки с фото не растягивают страницу; Слайдер 1 требует 5+ новостей постоянно.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__news__slider.1.png">Слайдер 1</span><span><img src="screenshots/intec-variants/pages-main-blocks__news__blocks.2.png">Блоки 2</span></div>
   </div>
-  <div class="low"><span>© BARUS, 2026</span><span>Политика ПДн · Согласие на обработку · Cookies</span></div>
-</div>
+</section>
+
+<!-- 16 -->
+<section class="blk" id="b16">
+  <div class="pv">
+    <img src="screenshots/intec-variants/pages-main-blocks__contacts__list.1.png" alt=""><div class="cap"><b>contacts → Список 1</b> · карта на всю ширину, сверху тёмная плашка с офисами/складом и менеджером</div>
+    <img src="screenshots/intec-variants/footer-blocks__form__wide.1.png" alt="" style="margin-top:10px"><div class="cap"><b>footer-blocks → «Нужна консультация?» Широкая 1</b> · синяя (перекрасить в бирюзу) полоса с кнопкой</div>
+    <img src="screenshots/intec-variants/footer-template__5.png" alt="" style="margin-top:10px"><div class="cap"><b>footer-template → Тип 5</b> · 3 колонки ссылок, поиск, адрес/почта/телефон, «Обратный звонок», платёжные иконки</div>
+  </div>
+  <div><div class="n">16 · Контакты + CTA + Футер</div><h2>Список 1 → CTA‑полоса → Футер Тип 5</h2>
+    <span class="tag k">contacts = list.1</span><span class="tag k">footer-blocks: form = wide.1</span><span class="tag k">footer-template = 5</span>
+    <div class="fill"><b>Наполняем</b><ul>
+      <li>Карта: офис/склад СПб (адрес, часы), производство, персональный менеджер + «Написать».</li>
+      <li>CTA‑полоса: «Не нашли инструмент под свой станок? Пришлите чертёж или артикул — подберём за 1 день» → кнопка «Отправить запрос».</li>
+      <li>Футер: Компания (О нас, Сертификаты, Новости, Вакансии, Реквизиты) · Покупателям (Оплата, Доставка, Гарантия, Возврат) · Каталог (6 разделов) · контакты + «Обратный звонок» · поиск · без платёжных иконок (B2B по счёту).</li></ul></div>
+    <div class="why"><b>Почему:</b> карта во всю ширину закрывает страницу, а CTA перед футером — последний шанс на заявку. Футер Тип 6 — красивый, но без контактной колонки; Тип 5 — самый информативный.</div>
+    <div class="alt">Альтернативы: <span><img src="screenshots/intec-variants/pages-main-blocks__contacts__simple.1.png">Контакты Обычный 1</span><span><img src="screenshots/intec-variants/footer-blocks__form__wide.2.png">Форма «Задать вопрос» Широкая 2</span><span><img src="screenshots/intec-variants/footer-template__6.png">Футер Тип 6</span></div>
+  </div>
+</section>
 
 </div>
 
-<div class="note" style="margin-top:20px">
-  Что изменилось в схеме против первой версии: блоки идут по согласованной таблице из 12 позиций, у каждого подписано, чем закрывается в INTEC.Prom. Бренды, акции и ведение новостей помечены жёлтым, это вопросы к заказчику. Заявка вынесена в первый экран второй кнопкой, потому что юрлица покупают через счёт, а не через корзину.
+<div class="off"><div class="wrap">
+  <h2>Блоки главной INTEC.Prom, которые выключаем (12 из 28)</h2>
+  <ul>
+    <li><b>Отзывы к товарам</b> — нет массовых отзывов B2B</li>
+    <li><b>Готовые образы</b> — fashion‑блок, не про инструмент</li>
+    <li><b>Коллекции</b> — дублирует «Разделы»</li>
+    <li><b>Товар дня</b> — нет акционной модели продаж</li>
+    <li><b>Истории</b> (stories) — не для B2B</li>
+    <li><b>Статьи</b> — сливаем с «Новости»; статьи — в разделе /articles/</li>
+    <li><b>Акции</b> — включим, когда появятся; пока пусто</li>
+    <li><b>Команда</b> — на странице «О компании»</li>
+    <li><b>Сертификаты</b> — на странице «О компании»/«Сертификаты»</li>
+    <li><b>Видео / Видеогалерея / Фотогалерея</b> — пока нет контента</li>
+    <li><b>Тарифы</b> — не подходит модели</li>
+    <li><b>ВКонтакте</b> — виджет ленты; при желании в футер</li>
+  </ul>
+</div></div>
+
+<div class="wrap set">
+  <h2>Что ещё выставляем в «Точной настройке» (глобально)</h2>
+  <table>
+    <tr><th>Параметр</th><th>Значение для Barus</th><th>Зачем</th></tr>
+    <tr><td>Цветовая схема / основной цвет</td><td>Бирюза #42c1c7, тёмный #232323, акцент жёлтый</td><td>Штатная перекраска всех кнопок/полос под фирменный стиль, без правок CSS</td></tr>
+    <tr><td>Ширина сайта</td><td>1400 px (или 1200)</td><td>Каталожные плитки 4 в ряд без сжатия</td></tr>
+    <tr><td>Шрифт</td><td>Montserrat (заголовки — Russo One через свой CSS, если оставляем)</td><td>Совпадает с логотипом Barus</td></tr>
+    <tr><td>Шаблон главной (pages-main-template)</td><td>Широкий</td><td>Баннер Тип 5 и карта на всю ширину</td></tr>
+    <tr><td>Шапка / мобильная шапка</td><td>Тип 4 / мобильный Тип 1 + меню Тип 1</td><td>Поиск в первом экране на мобильном</td></tr>
+    <tr><td>Каталог: корень / разделы / плитка</td><td>catalog-root = Плитки 2 · sections = Плитки 2 · elements-tile = Плитки 3 (компактная)</td><td>Единый стиль с блоком «Разделы» на главной</td></tr>
+    <tr><td>Карточка товара</td><td>catalog-detail = Тип 3 (характеристики рядом с ценой) + кнопка «Запросить КП»</td><td>B2B: характеристики важнее фото</td></tr>
+    <tr><td>Услуги (services-root)</td><td>Плитки 8 — как на главной</td><td>Консистентность</td></tr>
+    <tr><td>Всплывающие: поиск / меню</td><td>search-popup = Тип 2 (с подсказками по категориям)</td><td>Поиск по артикулу с подсказками</td></tr>
+  </table>
+  <p style="font-size:13px;color:var(--muted);margin-top:10px">Полный список из 325 превью всех вариантов блоков шаблона — в файле <a href="intec-blocks-gallery.html">intec-blocks-gallery.html</a>. Настроек шаблона в панели — 500+; полный дамп: intec-prom-template-settings.json.</p>
 </div>
 
+<div class="wrap foot">Схема составлена 09.09.2026 по панели «Точная настройка» демо‑сайта INTEC.Prom (promcrm.ru). Все превью — штатные картинки вариантов из шаблона. Заказная разработка не предполагается: только выбор вариантов + наполнение.</div>
 </body>
 </html>
