@@ -23,7 +23,10 @@ details[open]>summary::before{content:"▾"}
 .n{font-weight:500}
 .u{color:var(--mut);margin-left:8px;font-size:12.5px;font-family:ui-monospace,Menlo,Consolas,monospace}
 .c{color:var(--mut);margin-left:8px;font-size:12px}
-.b{margin-left:8px;font-size:11.5px;padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--mut)}
+.b{position:relative;display:inline-block;margin-left:8px;font-size:11.5px;padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--mut)}
+.b[data-t]{cursor:help;border-style:dashed}
+.b[data-t]:hover,.b[data-t]:focus{outline:none;background:#f3f5f7}
+.b[data-t]:hover::after,.b[data-t]:focus::after{content:attr(data-t);white-space:pre-line;position:absolute;left:0;top:calc(100% + 6px);z-index:20;min-width:260px;max-width:min(480px,78vw);padding:9px 11px;background:#1f2937;color:#fff;border-radius:6px;text-align:left;font:12px/1.55 ui-monospace,Menlo,Consolas,monospace;box-shadow:0 8px 24px rgba(0,0,0,.22);word-break:break-all;pointer-events:none}
 .b.keep{color:var(--keep);border-color:#bfe3d3}
 .b.r301{color:var(--r301);border-color:#ecd9a8}
 .b.new{color:var(--new);border-color:#c3d7f2}
@@ -33,8 +36,937 @@ details[open]>summary::before{content:"▾"}
 <h1>Структура сайта Барус Инструмент</h1>
 <p class="sub">Собрано из иерархии заказчика. Адреса и решения по переносу в таблице barus-struktura-sayta-v2.xlsx.</p>
 <div class="bar"><button id="two">Свернуть до разделов</button><button id="all">Развернуть всё</button><button id="none">Свернуть всё</button></div>
-<div class="legend"><span>адрес тот же: старый URL остаётся</span><span>301: редирект со старого</span><span>новая: страницы не было</span></div>
-<ul><li class="leaf"><span class="n">Главная</span><span class="u">/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Специальные предложения</span><span class="u">/sale/</span><span class="b r301">301</span></li><li><details open><summary><span class="n">Каталог</span><span class="u">/catalog/</span><span class="b keep">адрес тот же</span><span class="c">6</span></summary><ul><li><details><summary><span class="n">Оборудование для обработки листового металла и труб</span><span class="u">/catalog/machines/</span><span class="b keep">адрес тот же</span><span class="c">11</span></summary><ul><li><details><summary><span class="n">Станки лазерной резки листа</span><span class="u">/catalog/machines/lazernye_stanki/</span><span class="b keep">адрес тот же</span><span class="c">8</span></summary><ul><li><details><summary><span class="n">Открытого типа</span><span class="u">/catalog/machines/lazernye_stanki/otkrytogo-tipa/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">C-серия</span></li></ul></details></li><li><details><summary><span class="n">С кабинетной защитой</span><span class="u">/catalog/machines/lazernye_stanki/s-kabinetnoy-zashchitoy/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">X-серия</span></li></ul></details></li><li><details><summary><span class="n">С кабинетной защитой и сменными столами</span><span class="u">/catalog/machines/lazernye_stanki/so-smennymi-stolami/</span><span class="b r301">301</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">GT, GX, GH, GV-серия</span></li></ul></details></li><li><details><summary><span class="n">Комбинированный</span><span class="u">/catalog/machines/lazernye_stanki/kombinirovannye/</span><span class="b r301">301</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">CB-серия</span></li></ul></details></li><li><details><summary><span class="n">Рулонного типа</span><span class="u">/catalog/machines/lazernye_stanki/rulonnogo-tipa/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">GLA-серия</span></li></ul></details></li><li><details><summary><span class="n">3D резка</span><span class="u">/catalog/machines/lazernye_stanki/3d-rezka/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">3D-cell</span></li></ul></details></li><li><details><summary><span class="n">Крупноформатный</span><span class="u">/catalog/machines/lazernye_stanki/krupnoformatnye/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">GFA, GFB-серия</span></li></ul></details></li><li><details><summary><span class="n">Для профилей</span><span class="u">/catalog/machines/lazernye_stanki/dlya-profiley/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">PRB-серия</span></li></ul></details></li></ul></details></li><li class="leaf"><span class="n">Станки лазерной резки труб</span><span class="u">/catalog/machines/lazernye_stanki_dlya_rezki_trub/</span><span class="b keep">адрес тот же</span></li><li><details><summary><span class="n">Листогибочные прессы</span><span class="u">/catalog/machines/listogiby/</span><span class="b keep">адрес тот же</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">Гидравлические</span><span class="u">/catalog/machines/listogiby/listogibochnye_pressy_eko/</span><span class="b keep">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">EHC-серия</span></li></ul></details></li><li><details><summary><span class="n">Сервомеханические</span><span class="u">/catalog/machines/listogiby/listtgibochnye_pressy_eko_es/</span><span class="b keep">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">ESII-серия</span></li></ul></details></li><li><details><summary><span class="n">Гибридные</span><span class="u">/catalog/machines/listogiby/listogibochnye_pressy_eko_ehm/</span><span class="b keep">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">EHM-серия</span></li></ul></details></li></ul></details></li><li><details><summary><span class="n">Шлифовально-зачистные станки</span><span class="u">/catalog/machines/shlifovalno-zachistnye/</span><span class="b new">новый</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">для тонколистового металла и удаления не крупных дефектов</span><span class="u">/catalog/machines/shlifovalno-zachistnye/br-seriya/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">BR-серия</span></li></ul></details></li><li><details><summary><span class="n">Для среднелистового металла и удаления средних и крупных дефектов</span><span class="u">/catalog/machines/shlifovalno-zachistnye/tk-seriya/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">TK-серия</span></li></ul></details></li><li><details><summary><span class="n">Для толстого металла и крупных дефектов</span><span class="u">/catalog/machines/shlifovalno-zachistnye/stk-sdtk-seriya/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">STK и SDTK-серия</span></li></ul></details></li></ul></details></li><li class="leaf"><span class="n">Координатно-пробивные прессы</span><span class="u">/catalog/machines/krp_koordinatno_probivnoy_press/</span><span class="b keep">адрес тот же</span></li><li><details><summary><span class="n">Аппараты лазерной сварки</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/</span><span class="b keep">адрес тот же</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">Для тонко листового металла</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/swr-master-l/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">SWR MASTER L-серия</span></li></ul></details></li><li><details><summary><span class="n">Для толстого металла</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/swr-master-m/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">SWR MASTER M-серия</span></li></ul></details></li><li><details><summary><span class="n">Роботизированная лазерная сварка</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/swr-master-a/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">SWR MASTER A-серия</span></li></ul></details></li></ul></details></li><li class="leaf"><span class="n">Аппараты импульсной лазерной чистки</span><span class="u">/catalog/machines/impulsnaya-lazernaya-chistka/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Аппараты постоянной лазерной чистки</span><span class="u">/catalog/machines/nepreryvnaya-lazernaya-chistka/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Роботизированные системы</span><span class="u">/catalog/machines/robotizirovannye-sistemy/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Сервисное и вспомогательное оборудование</span><span class="u">/catalog/machines/servisnoe-oborudovanie/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Лазерные источники</span><span class="u">/catalog/machines/lazernye_istochniki/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">Гибочный инструмент</span><span class="u">/catalog/bendingtools/</span><span class="b keep">адрес тот же</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">Promecam</span><span class="u">/catalog/bendingtools/amada_promecam/</span><span class="b keep">адрес тот же</span><span class="c">10</span></summary><ul><li><details><summary><span class="n">Пуансоны</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/</span><span class="b keep">адрес тот же</span><span class="c">7</span></summary><ul><li class="leaf"><span class="n">Стандартный</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/standartnyy/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Гусак</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/gusak/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Прямой узкий</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/pryamoy-uzkiy/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Прямой для профилей</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/pryamoy-dlya-profiley/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Острый</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/ostryy/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Для больших толщин</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/dlya-bolshikh-tolshchin/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Инструмент для плющения</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/plyushchenie/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">Матрицы</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/</span><span class="b keep">адрес тот же</span><span class="c">5</span></summary><ul><li class="leaf"><span class="n">1V(одноручьевые)</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/1v/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">2V (двухручьевые)</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/2v/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">4V (четырехручьевые)</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/4v/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">T-образные</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/t-obraznye/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Инструмент для плющения</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/plyushchenie/</span><span class="b r301">301</span></li></ul></details></li><li class="leaf"><span class="n">Комплекты инструмента</span><span class="u">/catalog/bendingtools/amada_promecam/komplekty/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Z-гибка</span><span class="u">/catalog/bendingtools/amada_promecam/z_gibka/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Гибка без следов</span><span class="u">/catalog/bendingtools/amada_promecam/gibka-bez-sledov/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Радиусная гибка</span><span class="u">/catalog/bendingtools/amada_promecam/radiusnaya_gibka/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Держатели/Адаптеры</span><span class="u">/catalog/bendingtools/amada_promecam/derzhateli-adaptery/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Аксессуары</span><span class="u">/catalog/bendingtools/amada_promecam/aksessuary/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Вставки</span><span class="u">/catalog/bendingtools/amada_promecam/vstavki/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Специнструмент</span><span class="u">/catalog/bendingtools/amada_promecam/spetsinstrument/</span><span class="b r301">301</span></li></ul></details></li><li><details><summary><span class="n">Trumph</span><span class="u">/catalog/bendingtools/trumpf_1/</span><span class="b keep">адрес тот же</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">Пуансоны</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/</span><span class="b keep">адрес тот же</span><span class="c">4</span></summary><ul><li class="leaf"><span class="n">Гусак</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/gusak/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Прямой для профилей</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/pryamoy-dlya-profiley/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Острый</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/ostryy/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Для больших толщин</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/dlya-bolshikh-tolshchin/</span><span class="b new">новый</span></li></ul></details></li><li class="leaf"><span class="n">Матрицы</span><span class="u">/catalog/bendingtools/trumpf_1/matritsy_1/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Радиусная гибка</span><span class="u">/catalog/bendingtools/trumpf_1/radiusnaya-gibka/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Держатели/Адаптеры</span><span class="u">/catalog/bendingtools/trumpf_1/derzhateli-adaptery/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">Wila</span><span class="u">/catalog/bendingtools/wila/</span><span class="b keep">адрес тот же</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">Пуансоны</span><span class="u">/catalog/bendingtools/wila/puansony_2/</span><span class="b keep">адрес тот же</span><span class="c">4</span></summary><ul><li class="leaf"><span class="n">Гусак</span><span class="u">/catalog/bendingtools/wila/puansony_2/gusak/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Прямой для профилей</span><span class="u">/catalog/bendingtools/wila/puansony_2/pryamoy-dlya-profiley/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Острый</span><span class="u">/catalog/bendingtools/wila/puansony_2/ostryy/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Для больших толщин</span><span class="u">/catalog/bendingtools/wila/puansony_2/dlya-bolshikh-tolshchin/</span><span class="b new">новый</span></li></ul></details></li><li class="leaf"><span class="n">Матрицы</span><span class="u">/catalog/bendingtools/wila/matritsy_2/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Плющение</span><span class="u">/catalog/bendingtools/wila/matritsy_dlya_plyushcheniya_2/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li class="leaf"><span class="n">Комплектующие и ЗИП</span><span class="u">/catalog/bendingtools/komplektuyushchie-zip/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">Пробивной инструмент</span><span class="u">/catalog/punchtools/</span><span class="b keep">адрес тот же</span><span class="c">5</span></summary><ul><li><details><summary><span class="n">Thick Turret</span><span class="u">/catalog/punchtools/thick_turret/</span><span class="b keep">адрес тот же</span><span class="c">9</span></summary><ul><li class="leaf"><span class="n">Серия KETEC King Ultra</span><span class="u">/catalog/punchtools/thick_turret/seriya_king_ultra/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Серия KETEC Fully Guided</span><span class="u">/catalog/punchtools/thick_turret/seriya_ketec_fully_guided/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Серия KETEC TOP90</span><span class="u">/catalog/punchtools/thick_turret/seriya_top_90/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Серия KETEC KU</span><span class="u">/catalog/punchtools/thick_turret/seriya_ultra_ku/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Thich turret Формообразующий</span><span class="u">/catalog/punchtools/thick_turret/formoobrazuyushchiy/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Thick Turret роликовый</span><span class="u">/catalog/punchtools/thick_turret/rolikovyy/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Мультитул</span><span class="u">/catalog/punchtools/thick_turret/multitul/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Комплектующие</span><span class="u">/catalog/punchtools/thick_turret/komplektuyushchie_1/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Вспомогательный инструмент</span><span class="u">/catalog/punchtools/thick_turret/vspomogatelnyy_instrument/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Инструмент Trumpf</span><span class="u">/catalog/punchtools/trumpf/</span><span class="b keep">адрес тот же</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Стандартный инструмент Trumpf</span><span class="u">/catalog/punchtools/trumpf/standartnyy_instrument/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Вырубной инструмент со свенными вставками</span><span class="u">/catalog/punchtools/trumpf/so_smennymi_vstavkami/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Мультитул Trumpf</span><span class="u">/catalog/punchtools/trumpf/multitul2/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Trumpf формообразующий</span><span class="u">/catalog/punchtools/trumpf/formoobrazuyushchiy2/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Комплектующие Trumpf</span><span class="u">/catalog/punchtools/trumpf/komplektuyushchie/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Роликовый инструмент Trumpf</span><span class="u">/catalog/punchtools/trumpf/rolikovyy_trumpf/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Murata, Salvagnini, Thin Turret</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/</span><span class="b keep">адрес тот же</span><span class="c">7</span></summary><ul><li class="leaf"><span class="n">Стандартный инструмент MURATA</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/murata_instrument/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Вырубной инструмент со свенными вставками</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/so-smennymi-vstavkami/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Мультитул Trumpf</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/multitul/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">MURATA формообразующий</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/murata_formoobrazuyushchiy/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Thin Turret Стандартный Инструмент</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/thin_tourret_standartnyy_instrument/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Thin Turret Формообразующий</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/thin_tourret_formoobrazuyushchiy/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Salvagnini S4 Стандартный инструмент</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/salvagnini_s4_standartnyy_instrument/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li class="leaf"><span class="n">Формовочный инструмент</span><span class="u">/catalog/punchtools/forming-tools/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Роликовый инструмент</span><span class="u">/catalog/punchtools/rolikovyy_instrument/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Расходные материалы для лазерной резки</span><span class="u">/catalog/laser_comsumables/</span><span class="b keep">адрес тот же</span><span class="c">16</span></summary><ul><li><details><summary><span class="n">AMADA</span><span class="u">/catalog/laser_comsumables/amada/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Лазерные головы</span><span class="u">/catalog/laser_comsumables/lazernye-golovy/</span><span class="b r301">301</span></li></ul></details></li><li><details><summary><span class="n">BOCI/BOCHU</span><span class="u">/catalog/laser_comsumables/bochu/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Оптика для резки (защитные стекла, линзы)</span><span class="u">/catalog/laser_comsumables/optika/</span><span class="b r301">301</span></li></ul></details></li><li><details><summary><span class="n">BODOR</span><span class="u">/catalog/laser_comsumables/bodor/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Комплекты оптики</span><span class="u">/catalog/laser_comsumables/komplekty-optiki/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">HSG</span><span class="u">/catalog/laser_comsumables/hsg/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Керамические держатели</span><span class="u">/catalog/laser_comsumables/keramicheskie-derzhateli/</span><span class="b r301">301</span></li></ul></details></li><li><details><summary><span class="n">Bystronic</span><span class="u">/catalog/laser_comsumables/bystronic_head/</span><span class="b keep">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Сопла</span><span class="u">/catalog/laser_comsumables/sopla/</span><span class="b r301">301</span></li></ul></details></li><li><details><summary><span class="n">LVD / Mazak</span><span class="u">/catalog/laser_comsumables/lvd-mazak/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Сопловые узлы в сборе</span><span class="u">/catalog/laser_comsumables/soplovye-uzly/</span><span class="b new">новый</span></li></ul></details></li><li class="leaf"><span class="n">Precitec</span><span class="u">/catalog/laser_comsumables/precitec/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Prima Power</span><span class="u">/catalog/laser_comsumables/prima-power/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Raytools</span><span class="u">/catalog/laser_comsumables/raytools/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Salvagnini</span><span class="u">/catalog/laser_comsumables/salvagnini/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Trumpf</span><span class="u">/catalog/laser_comsumables/trumpf_head/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Unimach</span><span class="u">/catalog/laser_comsumables/unimach/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">WSX</span><span class="u">/catalog/laser_comsumables/wsx/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Комплектующие и ЗИП</span><span class="u">/catalog/laser_comsumables/komplektuyushchie-zip/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Аксессуары и СИЗ</span><span class="u">/catalog/laser_comsumables/aksessuary-siz/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Лазерные источники</span><span class="u">/catalog/laser_comsumables/lazernye_istochniki/</span><span class="b r301">301</span></li></ul></details></li><li><details><summary><span class="n">Плазменная расходка</span><span class="u">/catalog/plasma_consumables/</span><span class="b new">новый</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">HYPERTHERM</span><span class="u">/catalog/plasma_consumables/hypertherm/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Защитные колпаки</span><span class="u">/catalog/plasma_consumables/zashchitnye-kolpaki/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">Kjellberg</span><span class="u">/catalog/plasma_consumables/kjellberg/</span><span class="b new">новый</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Защитные экраны</span><span class="u">/catalog/plasma_consumables/zashchitnye-ekrany/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Защитные кожухи</span><span class="u">/catalog/plasma_consumables/zashchitnye-kozhukhi/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Сопла</span><span class="u">/catalog/plasma_consumables/sopla/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Электроды</span><span class="u">/catalog/plasma_consumables/elektrody/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Завихрители</span><span class="u">/catalog/plasma_consumables/zavikhriteli/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Резаки</span><span class="u">/catalog/plasma_consumables/rezaki/</span><span class="b new">новый</span></li></ul></details></li><li class="leaf"><span class="n">Комплектующие и ЗИП</span><span class="u">/catalog/plasma_consumables/komplektuyushchie-zip/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Аксессуары и СИЗ</span><span class="u">/catalog/plasma_consumables/aksessuary-siz/</span><span class="b new">новый</span></li></ul></details></li><li><details><summary><span class="n">Услуги и сервис</span><span class="b same">объединяем</span><span class="c">5</span></summary><ul><li><details><summary><span class="n">Станки лазерной резки</span><span class="u">/services/stanki-lazernoy-rezki/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">ПНР/Переезд</span></li></ul></details></li><li><details><summary><span class="n">Листогибочные прессы</span><span class="u">/services/listogibochnye-pressy/</span><span class="b new">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Ремонт оборудования</span><span class="b same">объединяем</span></li></ul></details></li><li><details><summary><span class="n">Координатно-Пробивные прессы</span><span class="u">/services/koordinatno-probivnye-pressy/</span><span class="b new">новый</span><span class="c">3</span></summary><ul><li class="leaf"><span class="n">Модернизация</span><span class="b same">объединяем</span></li><li class="leaf"><span class="n">Техническое обслуживание</span><span class="u">/services/tekhnicheskoe-obsluzhivanie/</span><span class="b new">новый</span></li><li class="leaf"><span class="n">Инструктаж по работе с оборудованием</span><span class="b same">объединяем</span></li></ul></details></li><li><details><summary><span class="n">Лазерные источники</span><span class="u">/services/lazernye-istochniki/</span><span class="b new">новый</span><span class="c">2</span></summary><ul><li class="leaf"><span class="n">Ремонт лазерных источников и голов</span><span class="b same">объединяем</span></li><li class="leaf"><span class="n">Ремонт лазерных источников и голов</span><span class="b same">объединяем</span></li></ul></details></li><li class="leaf"><span class="n">Лазерные оптические системы</span><span class="u">/services/lazernye-opticheskie-sistemy/</span><span class="b new">новый</span></li></ul></details></li></ul></details></li><li><details open><summary><span class="n">Сервис</span><span class="u">/services/</span><span class="b r301">301</span><span class="c">9</span></summary><ul><li class="leaf"><span class="n">Пусконаладочные работы (ПНР) оборудования</span><span class="u">/services/pnr/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Переезд и перемещение промышленного оборудования</span><span class="u">/services/pereezd/</span><span class="b new">новая</span></li><li><details><summary><span class="n">Ремонт промышленного листообрабатывающего оборудования</span><span class="u">/services/remont/</span><span class="b new">новая</span><span class="c">3</span></summary><ul><li class="leaf"><span class="n">Станки лазерной резки</span><span class="u">/services/remont/stanki-lazernoy-rezki/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Листогибочные прессы</span><span class="u">/services/remont/listogibochnye-pressy/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Координатно-Пробивные прессы</span><span class="u">/services/remont/koordinatno-probivnye-pressy/</span><span class="b new">новая</span></li></ul></details></li><li class="leaf"><span class="n">Инструктаж операторов оборудования</span><span class="u">/services/instruktazh/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Техническое обслуживание</span><span class="u">/services/tekhnicheskoe-obsluzhivanie/</span><span class="b new">новая</span></li><li><details><summary><span class="n">Модернизация оборудования</span><span class="u">/services/modernizatsiya/</span><span class="b new">новая</span><span class="c">3</span></summary><ul><li class="leaf"><span class="n">Модернизация станков лазерной резки</span><span class="u">/services/modernizatsiya/stanki-lazernoy-rezki/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Модернизация листогибочных прессов</span><span class="u">/services/modernizatsiya/listogibochnye-pressy/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Модернизация координатно-пробивных прессов</span><span class="u">/services/modernizatsiya/koordinatno-probivnye-pressy/</span><span class="b new">новая</span></li></ul></details></li><li class="leaf"><span class="n">Ремонт лазерных источников</span><span class="u">/services/remont-lazernykh-istochnikov/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Ремонт лазерных режущих головок</span><span class="u">/services/remont-lazernykh-golovok/</span><span class="b new">новая</span></li><li><details><summary><span class="n">Другие услуги</span><span class="u">/services/drugie-uslugi/</span><span class="b new">новая</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Проволочно-вырезная электроэрозионная обработка</span><span class="u">/services/drugie-uslugi/elektroerozionnaya-obrabotka/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Электроэрозионное сверление супердрелью</span><span class="u">/services/drugie-uslugi/sverlenie-superdrelyu/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Маркировка металлических деталей</span><span class="u">/services/drugie-uslugi/markirovka/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Разработка и изготовление гибочного инструмента для прессов с ЧПУ</span><span class="u">/services/drugie-uslugi/razrabotka-gibochnogo-instrumenta/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Пескоструйная обработка деталей</span><span class="u">/services/drugie-uslugi/peskostruynaya-obrabotka/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Разработка и изготовление технологической оснастки</span><span class="u">/services/drugie-uslugi/tekhnologicheskaya-osnastka/</span><span class="b new">новая</span></li></ul></details></li></ul></details></li><li><details open><summary><span class="n">Производители</span><span class="u">/brands/</span><span class="b r301">301</span><span class="c">15</span></summary><ul><li class="leaf"><span class="n">HSG</span><span class="u">/brands/hsg/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">EKO</span><span class="u">/brands/eko/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">SHINETEK</span><span class="u">/brands/shinetek/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">ACCUEPRESS</span><span class="u">/brands/accuepress/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">KETEK</span><span class="u">/brands/ketek/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">BOCI</span><span class="u">/brands/boci/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">HYPERTHERM</span><span class="u">/brands/hypertherm/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">BARUS MACHINES</span><span class="u">/brands/barus-machines/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">BARUS VENT</span><span class="u">/brands/barus-vent/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">BARUS DEBURR</span><span class="u">/brands/barus-deburr/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">SWR MASTER</span><span class="u">/brands/swr-master/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">RAYCUS</span><span class="u">/brands/raycus/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Kjellberg Finsterwalde</span><span class="u">/brands/kjellberg/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">VPG LaserONE</span><span class="u">/brands/vpg-laserone/</span><span class="b new">новая</span></li><li><details><summary><span class="n">BARUS</span><span class="u">/brands/barus/</span><span class="b r301">301</span><span class="c">4</span></summary><ul><li class="leaf"><span class="n">BARUS ITALY</span><span class="u">/brands/barus-italy/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">BARUS JAPAN</span><span class="u">/brands/barus-japan/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">BARUS PREMIUM PRC</span><span class="u">/brands/barus-premium-prc/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">BARUS STANDART PRC</span><span class="u">/brands/barus-standart-prc/</span><span class="b new">новая</span></li></ul></details></li></ul></details></li><li><details open><summary><span class="n">Проекты</span><span class="u">/projects/</span><span class="b keep">адрес тот же</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Станки лазерной резки листа</span><span class="u">/projects/stanki-lazernoy-rezki-lista/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Станки лазерной резки трубы</span><span class="u">/projects/stanki-lazernoy-rezki-truby/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Листогибочные прессы</span><span class="u">/projects/listogibochnye-pressy/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Коорданатно-пробивыне станки</span><span class="u">/projects/koordanatno-probivyne-stanki/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Шлифовально-зачистное оборудование</span><span class="u">/projects/shlifovalno-zachistnoe-oborudovanie/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Аппараты лазерной сварки</span><span class="u">/projects/apparaty-lazernoy-svarki/</span><span class="b new">новая</span></li></ul></details></li><li><details open><summary><span class="n">Техническая информация</span><span class="u">/tech-info/</span><span class="b keep">адрес тот же</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">Оборудование</span><span class="u">/tech-info/oborudovanie/</span><span class="b keep">адрес тот же</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Станки лазерной резки листа</span><span class="u">/tech-info/oborudovanie/stanki-lazernoy-rezki-lista/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Станки лазерной резки трубы</span><span class="u">/tech-info/oborudovanie/stanki-lazernoy-rezki-truby/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Листогибочные прессы</span><span class="u">/tech-info/oborudovanie/listogibochnye-pressy/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Коорданатно-пробивыне станки</span><span class="u">/tech-info/oborudovanie/koordanatno-probivyne-stanki/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Шлифовально-зачистное оборудование</span><span class="u">/tech-info/oborudovanie/shlifovalno-zachistnoe-oborudovanie/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Аппараты лазерной сварки</span><span class="u">/tech-info/oborudovanie/apparaty-lazernoy-svarki/</span><span class="b new">новая</span></li></ul></details></li><li><details><summary><span class="n">Инструмент</span><span class="u">/tech-info/instrument/</span><span class="b new">новая</span><span class="c">2</span></summary><ul><li class="leaf"><span class="n">Гибочный</span><span class="u">/tech-info/instrument-gibochnyy/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Пробивной</span><span class="u">/tech-info/instrument-probivnoy/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Расходные материалы</span><span class="u">/tech-info/raskhodnye-materialy/</span><span class="b new">новая</span><span class="c">2</span></summary><ul><li class="leaf"><span class="n">лазерная резка</span><span class="u">/tech-info/raskhodnye-materialy/lazernaya-rezka/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">плазменная резка</span><span class="u">/tech-info/raskhodnye-materialy/plazmennaya-rezka/</span><span class="b new">новая</span></li></ul></details></li><li class="leaf"><span class="n">Статьи</span><span class="u">/articles/</span><span class="b keep">адрес тот же</span></li></ul></details></li><li><details open><summary><span class="n">О компании</span><span class="u">/about/</span><span class="b keep">адрес тот же</span><span class="c">11</span></summary><ul><li class="leaf"><span class="n">О сервисе</span><span class="u">/about/service/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Новости</span><span class="u">/news/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Отзывы</span><span class="u">/about/reviews/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Оплата и доставка</span><span class="u">/about/payment-delivery/</span><span class="b r301">301</span></li><li class="leaf"><span class="n">Стандартные условия приобретения</span><span class="u">/about/terms/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Лизинг</span><span class="u">/about/leasing/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Гос. субсидии</span><span class="u">/about/subsidies/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Рассрочка</span><span class="u">/about/installment/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Гарантийные обязательства</span><span class="u">/about/warranty/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Сотрудники</span><span class="u">/about/team/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Дилерские сертификаты</span><span class="u">/about/certificates/</span><span class="b new">новая</span></li></ul></details></li><li class="leaf"><span class="n">Контакты</span><span class="u">/contacts/</span><span class="b keep">адрес тот же</span></li><li><details open><summary><span class="n">Служебные</span><span class="b new">новая</span><span class="c">8</span></summary><ul><li class="leaf"><span class="n">Политика обработки персональных данных</span><span class="u">/privacy/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Согласие на обработку персональных данных</span><span class="u">/consent/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Политика cookies</span><span class="u">/cookies/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Карта сайта</span><span class="u">/sitemap/</span><span class="b new">новая</span></li><li class="leaf"><span class="n">Поиск</span><span class="u">/search/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Сравнение</span><span class="u">/compare/</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Ошибка сервера</span><span class="u">/500.html</span><span class="b keep">адрес тот же</span></li><li class="leaf"><span class="n">Вакансии</span><span class="u">/about/vacancies/</span><span class="b new">новая</span></li></ul></details></li></ul>
+<div class="legend"><span>адрес тот же: старый URL остаётся</span><span>301: редирект со старого</span><span>новая: страницы не было</span><span>наведите на метку — покажет было и стало</span></div>
+<ul><li class="leaf"><span class="n">Главная</span><span class="u">/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/
+
+Проверено: аудит старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Специальные предложения</span><span class="u">/sale/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/about/sale/
+
+Станет:
+/sale/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li><details open><summary><span class="n">Каталог</span><span class="u">/catalog/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">6</span></summary><ul><li><details><summary><span class="n">Оборудование для обработки листового металла и труб</span><span class="u">/catalog/machines/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">11</span></summary><ul><li><details><summary><span class="n">Станки лазерной резки листа</span><span class="u">/catalog/machines/lazernye_stanki/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/lazernye_stanki/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">8</span></summary><ul><li><details><summary><span class="n">Открытого типа</span><span class="u">/catalog/machines/lazernye_stanki/otkrytogo-tipa/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_stanki/otkrytogo-tipa/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">C-серия</span></li></ul></details></li><li><details><summary><span class="n">С кабинетной защитой</span><span class="u">/catalog/machines/lazernye_stanki/s-kabinetnoy-zashchitoy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_stanki/s-kabinetnoy-zashchitoy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">X-серия</span></li></ul></details></li><li><details><summary><span class="n">С кабинетной защитой и сменными столами</span><span class="u">/catalog/machines/lazernye_stanki/so-smennymi-stolami/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/machines/lazernye_stanki/lazernye_stanki_hsg_gx/
+/catalog/machines/lazernye_stanki/lazernyy_stanok_dlya_listovogo_metalla_hsg_gx_pro_/
+/catalog/machines/lazernye_stanki/lazernyy_stanok_s_lineynym_privodom_hsg_gx_m/
+/catalog/machines/lazernye_stanki/stanok_lazernoy_rezki_hsg_gh/
+
+Станет:
+/catalog/machines/lazernye_stanki/so-smennymi-stolami/
+
+Старый адрес отдаёт 301 на новый">301</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">GT, GX, GH, GV-серия</span></li></ul></details></li><li><details><summary><span class="n">Комбинированный</span><span class="u">/catalog/machines/lazernye_stanki/kombinirovannye/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/machines/kombinirovannye_lazernye_stanki/
+/catalog/machines/kombinirovannye_lazernye_stanki/lazernyy_stanok_dlya_lista_i_trub_hsg_gxe/
+/catalog/machines/kombinirovannye_lazernye_stanki/lazernyy_stanok_dlya_rezki_lista_i_trub/
+
+Станет:
+/catalog/machines/lazernye_stanki/kombinirovannye/
+
+Старый адрес отдаёт 301 на новый">301</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">CB-серия</span></li></ul></details></li><li><details><summary><span class="n">Рулонного типа</span><span class="u">/catalog/machines/lazernye_stanki/rulonnogo-tipa/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_stanki/rulonnogo-tipa/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">GLA-серия</span></li></ul></details></li><li><details><summary><span class="n">3D резка</span><span class="u">/catalog/machines/lazernye_stanki/3d-rezka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_stanki/3d-rezka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">3D-cell</span></li></ul></details></li><li><details><summary><span class="n">Крупноформатный</span><span class="u">/catalog/machines/lazernye_stanki/krupnoformatnye/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_stanki/krupnoformatnye/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">GFA, GFB-серия</span></li></ul></details></li><li><details><summary><span class="n">Для профилей</span><span class="u">/catalog/machines/lazernye_stanki/dlya-profiley/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_stanki/dlya-profiley/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">PRB-серия</span></li></ul></details></li></ul></details></li><li class="leaf"><span class="n">Станки лазерной резки труб</span><span class="u">/catalog/machines/lazernye_stanki_dlya_rezki_trub/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/lazernye_stanki_dlya_rezki_trub/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li><details><summary><span class="n">Листогибочные прессы</span><span class="u">/catalog/machines/listogiby/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/listogiby/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">Гидравлические</span><span class="u">/catalog/machines/listogiby/listogibochnye_pressy_eko/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/listogiby/listogibochnye_pressy_eko/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">EHC-серия</span></li></ul></details></li><li><details><summary><span class="n">Сервомеханические</span><span class="u">/catalog/machines/listogiby/listtgibochnye_pressy_eko_es/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/listogiby/listtgibochnye_pressy_eko_es/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">ESII-серия</span></li></ul></details></li><li><details><summary><span class="n">Гибридные</span><span class="u">/catalog/machines/listogiby/listogibochnye_pressy_eko_ehm/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/listogiby/listogibochnye_pressy_eko_ehm/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">EHM-серия</span></li></ul></details></li></ul></details></li><li><details><summary><span class="n">Шлифовально-зачистные станки</span><span class="u">/catalog/machines/shlifovalno-zachistnye/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/shlifovalno-zachistnye/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">для тонколистового металла и удаления не крупных дефектов</span><span class="u">/catalog/machines/shlifovalno-zachistnye/br-seriya/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/shlifovalno-zachistnye/br-seriya/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">BR-серия</span></li></ul></details></li><li><details><summary><span class="n">Для среднелистового металла и удаления средних и крупных дефектов</span><span class="u">/catalog/machines/shlifovalno-zachistnye/tk-seriya/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/shlifovalno-zachistnye/tk-seriya/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">TK-серия</span></li></ul></details></li><li><details><summary><span class="n">Для толстого металла и крупных дефектов</span><span class="u">/catalog/machines/shlifovalno-zachistnye/stk-sdtk-seriya/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/shlifovalno-zachistnye/stk-sdtk-seriya/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">STK и SDTK-серия</span></li></ul></details></li></ul></details></li><li class="leaf"><span class="n">Координатно-пробивные прессы</span><span class="u">/catalog/machines/krp_koordinatno_probivnoy_press/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/krp_koordinatno_probivnoy_press/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li><details><summary><span class="n">Аппараты лазерной сварки</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/machines/apparaty_lazernoy_svarki/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">Для тонко листового металла</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/swr-master-l/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/apparaty_lazernoy_svarki/swr-master-l/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">SWR MASTER L-серия</span></li></ul></details></li><li><details><summary><span class="n">Для толстого металла</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/swr-master-m/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/apparaty_lazernoy_svarki/swr-master-m/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">SWR MASTER M-серия</span></li></ul></details></li><li><details><summary><span class="n">Роботизированная лазерная сварка</span><span class="u">/catalog/machines/apparaty_lazernoy_svarki/swr-master-a/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/apparaty_lazernoy_svarki/swr-master-a/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">SWR MASTER A-серия</span></li></ul></details></li></ul></details></li><li class="leaf"><span class="n">Аппараты импульсной лазерной чистки</span><span class="u">/catalog/machines/impulsnaya-lazernaya-chistka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/impulsnaya-lazernaya-chistka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Аппараты постоянной лазерной чистки</span><span class="u">/catalog/machines/nepreryvnaya-lazernaya-chistka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/nepreryvnaya-lazernaya-chistka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Роботизированные системы</span><span class="u">/catalog/machines/robotizirovannye-sistemy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/robotizirovannye-sistemy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Сервисное и вспомогательное оборудование</span><span class="u">/catalog/machines/servisnoe-oborudovanie/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/uslugi_tsentra_servisnykh_uslug/zatochnoy_stanok/
+
+Станет:
+/catalog/machines/servisnoe-oborudovanie/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Лазерные источники</span><span class="u">/catalog/machines/lazernye_istochniki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/machines/lazernye_istochniki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">Гибочный инструмент</span><span class="u">/catalog/bendingtools/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">Promecam</span><span class="u">/catalog/bendingtools/amada_promecam/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/amada_promecam/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">10</span></summary><ul><li><details><summary><span class="n">Пуансоны</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/amada_promecam/puansony/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">7</span></summary><ul><li class="leaf"><span class="n">Стандартный</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/standartnyy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/standartnyy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Гусак</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/gusak/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/gusak/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Прямой узкий</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/pryamoy-uzkiy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/pryamoy-uzkiy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Прямой для профилей</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/pryamoy-dlya-profiley/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/pryamoy-dlya-profiley/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Острый</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/ostryy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/ostryy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Для больших толщин</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/dlya-bolshikh-tolshchin/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/dlya-bolshikh-tolshchin/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Инструмент для плющения</span><span class="u">/catalog/bendingtools/amada_promecam/puansony/plyushchenie/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/puansony/plyushchenie/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">Матрицы</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/amada_promecam/matritsy/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">5</span></summary><ul><li class="leaf"><span class="n">1V(одноручьевые)</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/1v/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/matritsy/1v/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">2V (двухручьевые)</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/2v/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/matritsy/s_dvumya_ruchyami/
+
+Станет:
+/catalog/bendingtools/amada_promecam/matritsy/2v/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">4V (четырехручьевые)</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/4v/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/matritsy/mnogoruchevye/
+
+Станет:
+/catalog/bendingtools/amada_promecam/matritsy/4v/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">T-образные</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/t-obraznye/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/matritsy/s_odnim_ruchem_t_obraznye/
+
+Станет:
+/catalog/bendingtools/amada_promecam/matritsy/t-obraznye/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Инструмент для плющения</span><span class="u">/catalog/bendingtools/amada_promecam/matritsy/plyushchenie/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/plyushchenie/
+/catalog/bendingtools/amada_promecam/plyushchenie/matritsy_dlya_plyushcheniya/
+/catalog/bendingtools/amada_promecam/plyushchenie/ploshchadki_dlya_plyushcheniya/
+
+Станет:
+/catalog/bendingtools/amada_promecam/matritsy/plyushchenie/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li class="leaf"><span class="n">Комплекты инструмента</span><span class="u">/catalog/bendingtools/amada_promecam/komplekty/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/plyushchenie/komplekty_dlya_plyushcheniya/
+
+Станет:
+/catalog/bendingtools/amada_promecam/komplekty/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Z-гибка</span><span class="u">/catalog/bendingtools/amada_promecam/z_gibka/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/amada_promecam/z_gibka/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Гибка без следов</span><span class="u">/catalog/bendingtools/amada_promecam/gibka-bez-sledov/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/amada_promecam/gibka-bez-sledov/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Радиусная гибка</span><span class="u">/catalog/bendingtools/amada_promecam/radiusnaya_gibka/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/amada_promecam/radiusnaya_gibka/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Держатели/Адаптеры</span><span class="u">/catalog/bendingtools/amada_promecam/derzhateli-adaptery/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/matritsy/derzhateli_matrits_s_dvumya_ruchyami/
+/catalog/bendingtools/amada_promecam/matritsy/derzhateli_matrits_vstavok/
+/catalog/bendingtools/sistemy_bystroy_smeny_instrumenta/
+
+Станет:
+/catalog/bendingtools/amada_promecam/derzhateli-adaptery/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Аксессуары</span><span class="u">/catalog/bendingtools/amada_promecam/aksessuary/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/stoyka_dlya_instrumenta/
+
+Станет:
+/catalog/bendingtools/amada_promecam/aksessuary/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Вставки</span><span class="u">/catalog/bendingtools/amada_promecam/vstavki/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/amada_promecam/matritsy/vstavki/
+
+Станет:
+/catalog/bendingtools/amada_promecam/vstavki/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Специнструмент</span><span class="u">/catalog/bendingtools/amada_promecam/spetsinstrument/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/bendingtools/spetsialnyy/
+
+Станет:
+/catalog/bendingtools/amada_promecam/spetsinstrument/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li><details><summary><span class="n">Trumph</span><span class="u">/catalog/bendingtools/trumpf_1/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/trumpf_1/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">Пуансоны</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/trumpf_1/puansony_1/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">4</span></summary><ul><li class="leaf"><span class="n">Гусак</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/gusak/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/trumpf_1/puansony_1/gusak/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Прямой для профилей</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/pryamoy-dlya-profiley/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/trumpf_1/puansony_1/pryamoy-dlya-profiley/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Острый</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/ostryy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/trumpf_1/puansony_1/ostryy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Для больших толщин</span><span class="u">/catalog/bendingtools/trumpf_1/puansony_1/dlya-bolshikh-tolshchin/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/trumpf_1/puansony_1/dlya-bolshikh-tolshchin/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li class="leaf"><span class="n">Матрицы</span><span class="u">/catalog/bendingtools/trumpf_1/matritsy_1/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/trumpf_1/matritsy_1/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Радиусная гибка</span><span class="u">/catalog/bendingtools/trumpf_1/radiusnaya-gibka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/trumpf_1/radiusnaya-gibka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Держатели/Адаптеры</span><span class="u">/catalog/bendingtools/trumpf_1/derzhateli-adaptery/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/trumpf_1/derzhateli-adaptery/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">Wila</span><span class="u">/catalog/bendingtools/wila/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/wila/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">3</span></summary><ul><li><details><summary><span class="n">Пуансоны</span><span class="u">/catalog/bendingtools/wila/puansony_2/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/wila/puansony_2/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">4</span></summary><ul><li class="leaf"><span class="n">Гусак</span><span class="u">/catalog/bendingtools/wila/puansony_2/gusak/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/wila/puansony_2/gusak/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Прямой для профилей</span><span class="u">/catalog/bendingtools/wila/puansony_2/pryamoy-dlya-profiley/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/wila/puansony_2/pryamoy-dlya-profiley/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Острый</span><span class="u">/catalog/bendingtools/wila/puansony_2/ostryy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/wila/puansony_2/ostryy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Для больших толщин</span><span class="u">/catalog/bendingtools/wila/puansony_2/dlya-bolshikh-tolshchin/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/wila/puansony_2/dlya-bolshikh-tolshchin/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li class="leaf"><span class="n">Матрицы</span><span class="u">/catalog/bendingtools/wila/matritsy_2/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/wila/matritsy_2/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Плющение</span><span class="u">/catalog/bendingtools/wila/matritsy_dlya_plyushcheniya_2/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/bendingtools/wila/matritsy_dlya_plyushcheniya_2/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li class="leaf"><span class="n">Комплектующие и ЗИП</span><span class="u">/catalog/bendingtools/komplektuyushchie-zip/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/bendingtools/komplektuyushchie-zip/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">Пробивной инструмент</span><span class="u">/catalog/punchtools/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">5</span></summary><ul><li><details><summary><span class="n">Thick Turret</span><span class="u">/catalog/punchtools/thick_turret/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">9</span></summary><ul><li class="leaf"><span class="n">Серия KETEC King Ultra</span><span class="u">/catalog/punchtools/thick_turret/seriya_king_ultra/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/seriya_king_ultra/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Серия KETEC Fully Guided</span><span class="u">/catalog/punchtools/thick_turret/seriya_ketec_fully_guided/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/seriya_ketec_fully_guided/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Серия KETEC TOP90</span><span class="u">/catalog/punchtools/thick_turret/seriya_top_90/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/seriya_top_90/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Серия KETEC KU</span><span class="u">/catalog/punchtools/thick_turret/seriya_ultra_ku/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/seriya_ultra_ku/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Thich turret Формообразующий</span><span class="u">/catalog/punchtools/thick_turret/formoobrazuyushchiy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/formoobrazuyushchiy/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Thick Turret роликовый</span><span class="u">/catalog/punchtools/thick_turret/rolikovyy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/rolikovyy/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Мультитул</span><span class="u">/catalog/punchtools/thick_turret/multitul/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/multitul/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Комплектующие</span><span class="u">/catalog/punchtools/thick_turret/komplektuyushchie_1/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/komplektuyushchie_1/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Вспомогательный инструмент</span><span class="u">/catalog/punchtools/thick_turret/vspomogatelnyy_instrument/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/thick_turret/vspomogatelnyy_instrument/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Инструмент Trumpf</span><span class="u">/catalog/punchtools/trumpf/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Стандартный инструмент Trumpf</span><span class="u">/catalog/punchtools/trumpf/standartnyy_instrument/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/standartnyy_instrument/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Вырубной инструмент со свенными вставками</span><span class="u">/catalog/punchtools/trumpf/so_smennymi_vstavkami/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/so_smennymi_vstavkami/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Мультитул Trumpf</span><span class="u">/catalog/punchtools/trumpf/multitul2/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/multitul2/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Trumpf формообразующий</span><span class="u">/catalog/punchtools/trumpf/formoobrazuyushchiy2/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/formoobrazuyushchiy2/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Комплектующие Trumpf</span><span class="u">/catalog/punchtools/trumpf/komplektuyushchie/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/komplektuyushchie/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Роликовый инструмент Trumpf</span><span class="u">/catalog/punchtools/trumpf/rolikovyy_trumpf/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/trumpf/rolikovyy_trumpf/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Murata, Salvagnini, Thin Turret</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/murata_salvagnini_thin_turret/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">7</span></summary><ul><li class="leaf"><span class="n">Стандартный инструмент MURATA</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/murata_instrument/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/murata_salvagnini_thin_turret/murata_instrument/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Вырубной инструмент со свенными вставками</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/so-smennymi-vstavkami/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/punchtools/murata_salvagnini_thin_turret/so-smennymi-vstavkami/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Мультитул Trumpf</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/multitul/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/punchtools/murata_salvagnini_thin_turret/multitul/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">MURATA формообразующий</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/murata_formoobrazuyushchiy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/murata_salvagnini_thin_turret/murata_formoobrazuyushchiy/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Thin Turret Стандартный Инструмент</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/thin_tourret_standartnyy_instrument/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/murata_salvagnini_thin_turret/thin_tourret_standartnyy_instrument/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Thin Turret Формообразующий</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/thin_tourret_formoobrazuyushchiy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/murata_salvagnini_thin_turret/thin_tourret_formoobrazuyushchiy/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Salvagnini S4 Стандартный инструмент</span><span class="u">/catalog/punchtools/murata_salvagnini_thin_turret/salvagnini_s4_standartnyy_instrument/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/murata_salvagnini_thin_turret/salvagnini_s4_standartnyy_instrument/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li class="leaf"><span class="n">Формовочный инструмент</span><span class="u">/catalog/punchtools/forming-tools/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/forming-tools/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Роликовый инструмент</span><span class="u">/catalog/punchtools/rolikovyy_instrument/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/punchtools/rolikovyy_instrument/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Расходные материалы для лазерной резки</span><span class="u">/catalog/laser_comsumables/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/laser_comsumables/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">16</span></summary><ul><li><details><summary><span class="n">AMADA</span><span class="u">/catalog/laser_comsumables/amada/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/amada/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Лазерные головы</span><span class="u">/catalog/laser_comsumables/lazernye-golovy/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/laser_comsumables/raytools/lazernye_golovy_raytools/
+/catalog/laser_comsumables/wsx/lazernye_golovy_wsx/
+
+Станет:
+/catalog/laser_comsumables/lazernye-golovy/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li><details><summary><span class="n">BOCI/BOCHU</span><span class="u">/catalog/laser_comsumables/bochu/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/bochu/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Оптика для резки (защитные стекла, линзы)</span><span class="u">/catalog/laser_comsumables/optika/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/laser_comsumables/precitec/fokusnye_linzy_precitec/
+/catalog/laser_comsumables/precitec/kollimatornye_linzy_precitec/
+/catalog/laser_comsumables/precitec/zashchitnye_styekla_precitec/
+/catalog/laser_comsumables/raytools/fokusnye_linzy_raytools_bodor/
+/catalog/laser_comsumables/raytools/kollimatornye_linzy_raytools_bodor/
+/catalog/laser_comsumables/raytools/zashchitnye_styekla_raytools_bodor/
+и ещё 5
+
+Станет:
+/catalog/laser_comsumables/optika/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li><details><summary><span class="n">BODOR</span><span class="u">/catalog/laser_comsumables/bodor/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/bodor/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Комплекты оптики</span><span class="u">/catalog/laser_comsumables/komplekty-optiki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/komplekty-optiki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">HSG</span><span class="u">/catalog/laser_comsumables/hsg/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/hsg/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Керамические держатели</span><span class="u">/catalog/laser_comsumables/keramicheskie-derzhateli/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/laser_comsumables/bystronic_head/keramicheskie_derzhateli_bystronic/
+/catalog/laser_comsumables/precitec/keramicheskie_derzhateli_sopla_/
+/catalog/laser_comsumables/raytools/keramicheskie_derzhateli_raytools_bodor/
+/catalog/laser_comsumables/vse_raskhodnye_materialy/keramicheskie_derzhateli_sopla_others/
+/catalog/laser_comsumables/wsx/keramicheskie_derzhateli_wsx%20/
+
+Станет:
+/catalog/laser_comsumables/keramicheskie-derzhateli/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li><details><summary><span class="n">Bystronic</span><span class="u">/catalog/laser_comsumables/bystronic_head/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/laser_comsumables/bystronic_head/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Сопла</span><span class="u">/catalog/laser_comsumables/sopla/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/laser_comsumables/bystronic_head/lazernye_sopla_bystronic/
+/catalog/laser_comsumables/precitec/lazernye_sopla_precitec/
+/catalog/laser_comsumables/raytools/lazernye_sopla_raytools_bodor/
+/catalog/laser_comsumables/trumpf_head/lazernye_sopla_trumpf/
+/catalog/laser_comsumables/wsx/lazernye_sopla_WSX%20/
+
+Станет:
+/catalog/laser_comsumables/sopla/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li><details><summary><span class="n">LVD / Mazak</span><span class="u">/catalog/laser_comsumables/lvd-mazak/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/lvd-mazak/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Сопловые узлы в сборе</span><span class="u">/catalog/laser_comsumables/soplovye-uzly/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/soplovye-uzly/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li class="leaf"><span class="n">Precitec</span><span class="u">/catalog/laser_comsumables/precitec/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/laser_comsumables/precitec/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Prima Power</span><span class="u">/catalog/laser_comsumables/prima-power/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/prima-power/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Raytools</span><span class="u">/catalog/laser_comsumables/raytools/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/laser_comsumables/raytools/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Salvagnini</span><span class="u">/catalog/laser_comsumables/salvagnini/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/salvagnini/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Trumpf</span><span class="u">/catalog/laser_comsumables/trumpf_head/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/laser_comsumables/trumpf_head/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Unimach</span><span class="u">/catalog/laser_comsumables/unimach/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/unimach/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">WSX</span><span class="u">/catalog/laser_comsumables/wsx/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/catalog/laser_comsumables/wsx/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Комплектующие и ЗИП</span><span class="u">/catalog/laser_comsumables/komplektuyushchie-zip/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/komplektuyushchie-zip/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Аксессуары и СИЗ</span><span class="u">/catalog/laser_comsumables/aksessuary-siz/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/laser_comsumables/aksessuary-siz/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Лазерные источники</span><span class="u">/catalog/laser_comsumables/lazernye_istochniki/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/laser_comsumables/raycus/
+/catalog/laser_comsumables/raycus/lazernye_istochniki/
+
+Станет:
+/catalog/laser_comsumables/lazernye_istochniki/
+
+Старый адрес отдаёт 301 на новый">301</span></li></ul></details></li><li><details><summary><span class="n">Плазменная расходка</span><span class="u">/catalog/plasma_consumables/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">HYPERTHERM</span><span class="u">/catalog/plasma_consumables/hypertherm/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/hypertherm/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Защитные колпаки</span><span class="u">/catalog/plasma_consumables/zashchitnye-kolpaki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/zashchitnye-kolpaki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">Kjellberg</span><span class="u">/catalog/plasma_consumables/kjellberg/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/kjellberg/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Защитные экраны</span><span class="u">/catalog/plasma_consumables/zashchitnye-ekrany/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/zashchitnye-ekrany/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Защитные кожухи</span><span class="u">/catalog/plasma_consumables/zashchitnye-kozhukhi/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/zashchitnye-kozhukhi/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Сопла</span><span class="u">/catalog/plasma_consumables/sopla/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/sopla/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Электроды</span><span class="u">/catalog/plasma_consumables/elektrody/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/elektrody/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Завихрители</span><span class="u">/catalog/plasma_consumables/zavikhriteli/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/zavikhriteli/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Резаки</span><span class="u">/catalog/plasma_consumables/rezaki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/rezaki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li class="leaf"><span class="n">Комплектующие и ЗИП</span><span class="u">/catalog/plasma_consumables/komplektuyushchie-zip/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/komplektuyushchie-zip/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Аксессуары и СИЗ</span><span class="u">/catalog/plasma_consumables/aksessuary-siz/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/catalog/plasma_consumables/aksessuary-siz/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li><li><details><summary><span class="n">Услуги и сервис</span><span class="b same" tabindex="0" data-t="Было на старом сайте:
+/catalog/uslugi_tsentra_servisnykh_uslug/
+/catalog/uslugi_tsentra_servisnykh_uslug/servis_barus_instrument/
+
+Станет:
+
+
+Старый адрес отдаёт 301 на новый">объединяем</span><span class="c">5</span></summary><ul><li><details><summary><span class="n">Станки лазерной резки</span><span class="u">/services/stanki-lazernoy-rezki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/stanki-lazernoy-rezki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">ПНР/Переезд</span></li></ul></details></li><li><details><summary><span class="n">Листогибочные прессы</span><span class="u">/services/listogibochnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/listogibochnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">1</span></summary><ul><li class="leaf"><span class="n">Ремонт оборудования</span><span class="b same">объединяем</span></li></ul></details></li><li><details><summary><span class="n">Координатно-Пробивные прессы</span><span class="u">/services/koordinatno-probivnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/koordinatno-probivnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">3</span></summary><ul><li class="leaf"><span class="n">Модернизация</span><span class="b same">объединяем</span></li><li class="leaf"><span class="n">Техническое обслуживание</span><span class="u">/services/tekhnicheskoe-obsluzhivanie/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/tekhnicheskoe-obsluzhivanie/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li><li class="leaf"><span class="n">Инструктаж по работе с оборудованием</span><span class="b same">объединяем</span></li></ul></details></li><li><details><summary><span class="n">Лазерные источники</span><span class="u">/services/lazernye-istochniki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/lazernye-istochniki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span><span class="c">2</span></summary><ul><li class="leaf"><span class="n">Ремонт лазерных источников и голов</span><span class="b same">объединяем</span></li><li class="leaf"><span class="n">Ремонт лазерных источников и голов</span><span class="b same">объединяем</span></li></ul></details></li><li class="leaf"><span class="n">Лазерные оптические системы</span><span class="u">/services/lazernye-opticheskie-sistemy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/lazernye-opticheskie-sistemy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новый</span></li></ul></details></li></ul></details></li><li><details open><summary><span class="n">Сервис</span><span class="u">/services/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/catalog/uslugi_tsentra_servisnykh_uslug/
+
+Станет:
+/services/
+
+Старый адрес отдаёт 301 на новый">301</span><span class="c">9</span></summary><ul><li class="leaf"><span class="n">Пусконаладочные работы (ПНР) оборудования</span><span class="u">/services/pnr/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/pnr/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Переезд и перемещение промышленного оборудования</span><span class="u">/services/pereezd/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/pereezd/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li><details><summary><span class="n">Ремонт промышленного листообрабатывающего оборудования</span><span class="u">/services/remont/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/remont/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span><span class="c">3</span></summary><ul><li class="leaf"><span class="n">Станки лазерной резки</span><span class="u">/services/remont/stanki-lazernoy-rezki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/remont/stanki-lazernoy-rezki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Листогибочные прессы</span><span class="u">/services/remont/listogibochnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/remont/listogibochnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Координатно-Пробивные прессы</span><span class="u">/services/remont/koordinatno-probivnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/remont/koordinatno-probivnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li><li class="leaf"><span class="n">Инструктаж операторов оборудования</span><span class="u">/services/instruktazh/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/instruktazh/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Техническое обслуживание</span><span class="u">/services/tekhnicheskoe-obsluzhivanie/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/tekhnicheskoe-obsluzhivanie/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li><details><summary><span class="n">Модернизация оборудования</span><span class="u">/services/modernizatsiya/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/modernizatsiya/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span><span class="c">3</span></summary><ul><li class="leaf"><span class="n">Модернизация станков лазерной резки</span><span class="u">/services/modernizatsiya/stanki-lazernoy-rezki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/modernizatsiya/stanki-lazernoy-rezki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Модернизация листогибочных прессов</span><span class="u">/services/modernizatsiya/listogibochnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/modernizatsiya/listogibochnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Модернизация координатно-пробивных прессов</span><span class="u">/services/modernizatsiya/koordinatno-probivnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/modernizatsiya/koordinatno-probivnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li><li class="leaf"><span class="n">Ремонт лазерных источников</span><span class="u">/services/remont-lazernykh-istochnikov/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/remont-lazernykh-istochnikov/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Ремонт лазерных режущих головок</span><span class="u">/services/remont-lazernykh-golovok/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/remont-lazernykh-golovok/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li><details><summary><span class="n">Другие услуги</span><span class="u">/services/drugie-uslugi/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/drugie-uslugi/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Проволочно-вырезная электроэрозионная обработка</span><span class="u">/services/drugie-uslugi/elektroerozionnaya-obrabotka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/drugie-uslugi/elektroerozionnaya-obrabotka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Электроэрозионное сверление супердрелью</span><span class="u">/services/drugie-uslugi/sverlenie-superdrelyu/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/drugie-uslugi/sverlenie-superdrelyu/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Маркировка металлических деталей</span><span class="u">/services/drugie-uslugi/markirovka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/drugie-uslugi/markirovka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Разработка и изготовление гибочного инструмента для прессов с ЧПУ</span><span class="u">/services/drugie-uslugi/razrabotka-gibochnogo-instrumenta/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/tool_manufacturing/
+
+Станет:
+/services/drugie-uslugi/razrabotka-gibochnogo-instrumenta/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Пескоструйная обработка деталей</span><span class="u">/services/drugie-uslugi/peskostruynaya-obrabotka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/drugie-uslugi/peskostruynaya-obrabotka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Разработка и изготовление технологической оснастки</span><span class="u">/services/drugie-uslugi/tekhnologicheskaya-osnastka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/services/drugie-uslugi/tekhnologicheskaya-osnastka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li></ul></details></li><li><details open><summary><span class="n">Производители</span><span class="u">/brands/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/partners/postavshchiki/
+
+Станет:
+/brands/
+
+Старый адрес отдаёт 301 на новый">301</span><span class="c">15</span></summary><ul><li class="leaf"><span class="n">HSG</span><span class="u">/brands/hsg/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/partners/postavshchiki/hsg/
+
+Станет:
+/brands/hsg/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">EKO</span><span class="u">/brands/eko/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/eko/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">SHINETEK</span><span class="u">/brands/shinetek/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/shinetek/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">ACCUEPRESS</span><span class="u">/brands/accuepress/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/accuepress/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">KETEK</span><span class="u">/brands/ketek/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/partners/postavshchiki/ketec/
+
+Станет:
+/brands/ketek/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">BOCI</span><span class="u">/brands/boci/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/boci/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">HYPERTHERM</span><span class="u">/brands/hypertherm/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/hypertherm/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">BARUS MACHINES</span><span class="u">/brands/barus-machines/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-machines/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">BARUS VENT</span><span class="u">/brands/barus-vent/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-vent/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">BARUS DEBURR</span><span class="u">/brands/barus-deburr/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-deburr/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">SWR MASTER</span><span class="u">/brands/swr-master/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/swr-master/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">RAYCUS</span><span class="u">/brands/raycus/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/raycus/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Kjellberg Finsterwalde</span><span class="u">/brands/kjellberg/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/kjellberg/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">VPG LaserONE</span><span class="u">/brands/vpg-laserone/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/vpg-laserone/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li><details><summary><span class="n">BARUS</span><span class="u">/brands/barus/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/partners/postavshchiki/barus-by-tptooling/
+
+Станет:
+/brands/barus/
+
+Старый адрес отдаёт 301 на новый">301</span><span class="c">4</span></summary><ul><li class="leaf"><span class="n">BARUS ITALY</span><span class="u">/brands/barus-italy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-italy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">BARUS JAPAN</span><span class="u">/brands/barus-japan/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-japan/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">BARUS PREMIUM PRC</span><span class="u">/brands/barus-premium-prc/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-premium-prc/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">BARUS STANDART PRC</span><span class="u">/brands/barus-standart-prc/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/brands/barus-standart-prc/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li></ul></details></li><li><details open><summary><span class="n">Проекты</span><span class="u">/projects/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/projects/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Станки лазерной резки листа</span><span class="u">/projects/stanki-lazernoy-rezki-lista/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/projects/stanki-lazernoy-rezki-lista/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Станки лазерной резки трубы</span><span class="u">/projects/stanki-lazernoy-rezki-truby/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/projects/stanki-lazernoy-rezki-truby/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Листогибочные прессы</span><span class="u">/projects/listogibochnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/projects/listogibochnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Коорданатно-пробивыне станки</span><span class="u">/projects/koordanatno-probivyne-stanki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/projects/koordanatno-probivyne-stanki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Шлифовально-зачистное оборудование</span><span class="u">/projects/shlifovalno-zachistnoe-oborudovanie/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/projects/shlifovalno-zachistnoe-oborudovanie/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Аппараты лазерной сварки</span><span class="u">/projects/apparaty-lazernoy-svarki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/projects/apparaty-lazernoy-svarki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li><li><details open><summary><span class="n">Техническая информация</span><span class="u">/tech-info/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/tech-info/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">4</span></summary><ul><li><details><summary><span class="n">Оборудование</span><span class="u">/tech-info/oborudovanie/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/tech-info/oborudovanie/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">6</span></summary><ul><li class="leaf"><span class="n">Станки лазерной резки листа</span><span class="u">/tech-info/oborudovanie/stanki-lazernoy-rezki-lista/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/oborudovanie/stanki-lazernoy-rezki-lista/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Станки лазерной резки трубы</span><span class="u">/tech-info/oborudovanie/stanki-lazernoy-rezki-truby/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/oborudovanie/stanki-lazernoy-rezki-truby/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Листогибочные прессы</span><span class="u">/tech-info/oborudovanie/listogibochnye-pressy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/oborudovanie/listogibochnye-pressy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Коорданатно-пробивыне станки</span><span class="u">/tech-info/oborudovanie/koordanatno-probivyne-stanki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/oborudovanie/koordanatno-probivyne-stanki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Шлифовально-зачистное оборудование</span><span class="u">/tech-info/oborudovanie/shlifovalno-zachistnoe-oborudovanie/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/oborudovanie/shlifovalno-zachistnoe-oborudovanie/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Аппараты лазерной сварки</span><span class="u">/tech-info/oborudovanie/apparaty-lazernoy-svarki/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/oborudovanie/apparaty-lazernoy-svarki/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li><li><details><summary><span class="n">Инструмент</span><span class="u">/tech-info/instrument/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/instrument/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span><span class="c">2</span></summary><ul><li class="leaf"><span class="n">Гибочный</span><span class="u">/tech-info/instrument-gibochnyy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/tech-info/instrument-gibochnyy/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Пробивной</span><span class="u">/tech-info/instrument-probivnoy/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/tech-info/instrument-probivnoy/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li><details><summary><span class="n">Расходные материалы</span><span class="u">/tech-info/raskhodnye-materialy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/raskhodnye-materialy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span><span class="c">2</span></summary><ul><li class="leaf"><span class="n">лазерная резка</span><span class="u">/tech-info/raskhodnye-materialy/lazernaya-rezka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/raskhodnye-materialy/lazernaya-rezka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">плазменная резка</span><span class="u">/tech-info/raskhodnye-materialy/plazmennaya-rezka/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/tech-info/raskhodnye-materialy/plazmennaya-rezka/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li><li class="leaf"><span class="n">Статьи</span><span class="u">/articles/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/articles/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li></ul></details></li><li><details open><summary><span class="n">О компании</span><span class="u">/about/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/about/
+
+Проверено: sitemap старого сайта">адрес тот же</span><span class="c">11</span></summary><ul><li class="leaf"><span class="n">О сервисе</span><span class="u">/about/service/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/about/service/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Новости</span><span class="u">/news/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/news/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Отзывы</span><span class="u">/about/reviews/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/reviews/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Оплата и доставка</span><span class="u">/about/payment-delivery/</span><span class="b r301" tabindex="0" data-t="Было на старом сайте:
+/partners/nasha-logistika/
+
+Станет:
+/about/payment-delivery/
+
+Старый адрес отдаёт 301 на новый">301</span></li><li class="leaf"><span class="n">Стандартные условия приобретения</span><span class="u">/about/terms/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/terms/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Лизинг</span><span class="u">/about/leasing/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/leasing/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Гос. субсидии</span><span class="u">/about/subsidies/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/subsidies/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Рассрочка</span><span class="u">/about/installment/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/installment/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Гарантийные обязательства</span><span class="u">/about/warranty/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/warranty/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Сотрудники</span><span class="u">/about/team/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/team/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Дилерские сертификаты</span><span class="u">/about/certificates/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/certificates/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li><li class="leaf"><span class="n">Контакты</span><span class="u">/contacts/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/contacts/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li><details open><summary><span class="n">Служебные</span><span class="b new" tabindex="0" data-t="Новый адрес:
+
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span><span class="c">8</span></summary><ul><li class="leaf"><span class="n">Политика обработки персональных данных</span><span class="u">/privacy/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/privacy/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Согласие на обработку персональных данных</span><span class="u">/consent/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/consent/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Политика cookies</span><span class="u">/cookies/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/cookies/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Карта сайта</span><span class="u">/sitemap/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/sitemap/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li><li class="leaf"><span class="n">Поиск</span><span class="u">/search/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/search/
+
+Проверено: аудит старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Сравнение</span><span class="u">/compare/</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/compare/
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Ошибка сервера</span><span class="u">/500.html</span><span class="b keep" tabindex="0" data-t="Адрес не меняется:
+/500.html
+
+Проверено: sitemap старого сайта">адрес тот же</span></li><li class="leaf"><span class="n">Вакансии</span><span class="u">/about/vacancies/</span><span class="b new" tabindex="0" data-t="Новый адрес:
+/about/vacancies/
+
+На старом сайте такого адреса нет
+Проверено по sitemap и аудиту">новая</span></li></ul></details></li></ul>
 </div><script>
 document.getElementById('all').onclick=()=>document.querySelectorAll('details').forEach(d=>d.open=true);
 document.getElementById('none').onclick=()=>document.querySelectorAll('details').forEach(d=>d.open=false);
