@@ -1,8 +1,6 @@
 ﻿0,1,2,3,4,5
 Барус Инструмент,Главная  /,,,,
 Барус Инструмент,Специальные предложения  /about/sale/,,,,
-Барус Инструмент,Каталог  /catalog/,Заявка (общение с менеджером) | Заказ (Интернет магазин),,,
-Барус Инструмент,Каталог  /catalog/,Каталог - верхняя иерархия | Категория | Подкатегория | URL Фида:,,,
 Барус Инструмент,Каталог  /catalog/,Оборудование для обработки листового металла и труб  /catalog/machines/,Станки лазерной резки листа  /catalog/machines/lazernye_stanki/,Открытого типа  /catalog/machines/lazernye_stanki/otkrytogo-tipa/,C-серия  /catalog/machines/lazernye_stanki/otkrytogo-tipa/c-seriya/
 Барус Инструмент,Каталог  /catalog/,Оборудование для обработки листового металла и труб  /catalog/machines/,Станки лазерной резки листа  /catalog/machines/lazernye_stanki/,С кабинетной защитой  /catalog/machines/lazernye_stanki/s-kabinetnoy-zashchitoy/,X-серия  /catalog/machines/lazernye_stanki/s-kabinetnoy-zashchitoy/x-seriya/
 Барус Инструмент,Каталог  /catalog/,Оборудование для обработки листового металла и труб  /catalog/machines/,Станки лазерной резки листа  /catalog/machines/lazernye_stanki/,С кабинетной защитой и сменными столами  /catalog/machines/lazernye_stanki/so-smennymi-stolami/,"GT, GX, GH, GV-серия  /catalog/machines/lazernye_stanki/so-smennymi-stolami/gt-gx-gh-gv-seriya/"
@@ -47,7 +45,6 @@
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Promecam  /catalog/bendingtools/amada_promecam/,Аксессуары  /catalog/bendingtools/amada_promecam/aksessuary/,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Promecam  /catalog/bendingtools/amada_promecam/,Вставки  /catalog/bendingtools/amada_promecam/vstavki/,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Promecam  /catalog/bendingtools/amada_promecam/,Специнструмент  /catalog/bendingtools/amada_promecam/spetsinstrument/,
-Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Promecam  /catalog/bendingtools/amada_promecam/,Специнструмент,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Пуансоны  /catalog/bendingtools/trumpf_1/puansony_1/,Гусак  /catalog/bendingtools/trumpf_1/puansony_1/gusak/
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Пуансоны  /catalog/bendingtools/trumpf_1/puansony_1/,Прямой для профилей  /catalog/bendingtools/trumpf_1/puansony_1/pryamoy-dlya-profiley/
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Пуансоны  /catalog/bendingtools/trumpf_1/puansony_1/,Острый  /catalog/bendingtools/trumpf_1/puansony_1/ostryy/
@@ -55,14 +52,12 @@
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Матрицы  /catalog/bendingtools/trumpf_1/matritsy_1/,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Радиусная гибка  /catalog/bendingtools/trumpf_1/radiusnaya-gibka/,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Держатели/Адаптеры  /catalog/bendingtools/trumpf_1/derzhateli-adaptery/,
-Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Trumph  /catalog/bendingtools/trumpf_1/,Держатели/Адаптеры,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Пуансоны  /catalog/bendingtools/wila/puansony_2/,Гусак  /catalog/bendingtools/wila/puansony_2/gusak/
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Пуансоны  /catalog/bendingtools/wila/puansony_2/,Прямой для профилей  /catalog/bendingtools/wila/puansony_2/pryamoy-dlya-profiley/
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Пуансоны  /catalog/bendingtools/wila/puansony_2/,Острый  /catalog/bendingtools/wila/puansony_2/ostryy/
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Пуансоны  /catalog/bendingtools/wila/puansony_2/,Для больших толщин  /catalog/bendingtools/wila/puansony_2/dlya-bolshikh-tolshchin/
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Матрицы  /catalog/bendingtools/wila/matritsy_2/,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Плющение  /catalog/bendingtools/wila/matritsy_dlya_plyushcheniya_2/,
-Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Wila  /catalog/bendingtools/wila/,Плющение,
 Барус Инструмент,Каталог  /catalog/,Гибочный инструмент  /catalog/bendingtools/,Комплектующие и ЗИП  /catalog/bendingtools/komplektuyushchie-zip/,,
 Барус Инструмент,Каталог  /catalog/,Пробивной инструмент  /catalog/punchtools/,Thick Turret  /catalog/punchtools/thick_turret/,Серия KETEC King Ultra  /catalog/punchtools/thick_turret/seriya_king_ultra/,
 Барус Инструмент,Каталог  /catalog/,Пробивной инструмент  /catalog/punchtools/,Thick Turret  /catalog/punchtools/thick_turret/,Серия KETEC Fully Guided  /catalog/punchtools/thick_turret/seriya_ketec_fully_guided/,
@@ -110,7 +105,6 @@
 Барус Инструмент,Каталог  /catalog/,Расходные материалы для лазерной резки  /catalog/laser_comsumables/,Комплектующие и ЗИП  /catalog/laser_comsumables/komplektuyushchie-zip/,,
 Барус Инструмент,Каталог  /catalog/,Расходные материалы для лазерной резки  /catalog/laser_comsumables/,Аксессуары и СИЗ  /catalog/laser_comsumables/aksessuary-siz/,,
 Барус Инструмент,Каталог  /catalog/,Расходные материалы для лазерной резки  /catalog/laser_comsumables/,Лазерные источники  /catalog/laser_comsumables/lazernye_istochniki/,,
-Барус Инструмент,Каталог  /catalog/,Расходные материалы для лазерной резки,,,
 Барус Инструмент,Каталог  /catalog/,Плазменная расходка  /catalog/plasma_consumables/,HYPERTHERM  /catalog/plasma_consumables/hypertherm/,,
 Барус Инструмент,Каталог  /catalog/,Плазменная расходка  /catalog/plasma_consumables/,Защитные колпаки  /catalog/plasma_consumables/zashchitnye-kolpaki/,,
 Барус Инструмент,Каталог  /catalog/,Плазменная расходка  /catalog/plasma_consumables/,Kjellberg  /catalog/plasma_consumables/kjellberg/,,
